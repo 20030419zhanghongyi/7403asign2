@@ -41,9 +41,12 @@ trap 'exit 143' TERM
     cat /etc/os-release
     docker version
     docker compose version
-    if command -v wrk > /dev/null; then wrk --version; fi
-    git rev-parse HEAD 2>/dev/null || true
-    git status --short 2>/dev/null || true
+    if command -v wrk > /dev/null; then wrk --version || true; fi
+    if git rev-parse HEAD 2>/dev/null; then
+        git status --short
+    elif [[ -f TESTED_COMMIT.txt ]]; then
+        cat TESTED_COMMIT.txt
+    fi
 } > "$OUTPUT/environment.txt" 2>&1
 sha256sum backend/app.py backend/Dockerfile backend/requirements.txt \
     backend/.dockerignore scripts/check_backend.sh scripts/backend_http_test.py \
@@ -99,7 +102,7 @@ for container in "$B1" "$B2" "$FALLBACK"; do
     docker logs "$container" > "$OUTPUT/$container.log" 2>&1
     grep -q '"event": "request".*"path": "/work".*"status": 200' "$OUTPUT/$container.log"
 done
-docker run --rm "$IMAGE" pip freeze > "$OUTPUT/dependencies.txt"
+docker run --rm "$IMAGE" pip --no-cache-dir freeze > "$OUTPUT/dependencies.txt"
 docker run --rm "$IMAGE" python --version >> "$OUTPUT/dependencies.txt"
 printf 'PASS: image, single process/thread, non-root user, internal networking and logs\n' \
     | tee -a "$OUTPUT/http-tests.log"
