@@ -1,0 +1,8 @@
+{"check": "identity", "service": "backend1", "response": {"instance": "backend1", "status": "ok"}}
+{"check": "work_delay", "service": "backend1", "latency_ms": [51.175, 52.065, 51.783]}
+{"check": "identity", "service": "backend2", "response": {"instance": "backend2", "status": "ok"}}
+{"check": "work_delay", "service": "backend2", "latency_ms": [51.916, 52.99, 51.469]}
+{"check": "identity", "service": "fallback", "response": {"instance": "fallback-host", "status": "ok"}}
+{"check": "work_delay", "service": "fallback", "latency_ms": [51.25, 51.381, 52.019]}
+{"check": "serial_requests", "clients": 6, "total_ms": 315.357, "latency_ms": [53.458, 104.87, 156.961, 208.913, 261.231, 314.866]}
+PASS: HTTP contracts, instance names, hostname fallback, delay and serial requests

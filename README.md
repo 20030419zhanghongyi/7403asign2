@@ -2,7 +2,16 @@
 
 Scalable Web Service with Load Balancing, Horizontal Scaling and Fault Tolerance.
 
-当前进度：已建立分工文档和基础目录。后端程序、Dockerfile、Nginx 配置和 Compose 部署文件由双方按分工实现；完整系统接通后开展实验。
+当前进度：`zhanghongyi` 分支已完成后端、Dockerfile、自动自测和真实虚拟机验收，Docker / Compose / wrk 已就绪。hanyan 可按 [后端交接说明](docs/backend_handoff.md) 接入 Nginx 与 Compose；完整系统接通后开展正式实验。
+
+后端构建和验收（在 Linux 虚拟机的仓库根目录执行）：
+
+```bash
+docker build -t cisc7403-backend:v1 ./backend
+bash scripts/check_backend.sh
+```
+
+实测源码提交：`7fb6a188d1f55c33c4bde987cb13a6d6d3023a50`；[验收证据索引](results/backend/README.md) 记录具体输出及源码校验值。
 
 ## 分工与分支
 
@@ -40,13 +49,19 @@ flowchart TD
 ├── .editorconfig
 ├── backend/
 │   ├── README.md
+│   ├── app.py
+│   ├── requirements.txt
+│   ├── Dockerfile
 │   └── .dockerignore
 ├── nginx/
 │   └── README.md
 ├── scripts/
-│   └── README.md
+│   ├── README.md
+│   ├── check_backend.sh
+│   └── backend_http_test.py
 ├── docs/
 │   ├── README.md
+│   ├── backend_handoff.md
 │   ├── zhanghongyi_工作范围与交接说明.md
 │   └── hanyan_工作范围与交接说明.md
 ├── results/
@@ -59,13 +74,13 @@ flowchart TD
     └── README.md
 ```
 
-`results/` 的各子目录用 `.gitkeep` 保留，实验完成后保存真实输出和必要截图。
+`results/backend/` 已保存真实自测输出；其余实验目录目前用 `.gitkeep` 保留。
 
 后续主要文件：
 
 | 负责人 | 需要补齐的文件 |
 | --- | --- |
-| zhanghongyi | `backend/app.py`、`backend/requirements.txt`、`backend/Dockerfile`、`docs/backend_handoff.md`、`scripts/benchmark.sh`、`docs/report_zhanghongyi.md` |
+| zhanghongyi | 系统集成后完成 `scripts/benchmark.sh`、`docs/report_zhanghongyi.md` 和正式性能实验 |
 | hanyan | `nginx/nginx.conf`、根目录 `docker-compose.yml`、`docs/integration_runbook.md`、`scripts/check_balance.sh`、`scripts/check_failover.sh`、`docs/report_hanyan.md` |
 | 双方 | `report/` 中最终报告与成员分工声明；README 最终运行步骤 |
 
@@ -76,11 +91,11 @@ flowchart TD
 3. zhanghongyi 合并集成提交后运行性能实验；hanyan 完成负载均衡及容错实验。共用虚拟机时错开测试时段。
 4. 双方各写约一半报告，核对原始证据后合并成果到 `main`，共同完成最终验收。
 
-个人分支由各自在开始开发时创建并推送。hanyan 接入后端时，以 zhanghongyi 提供的交接提交为准；具体流程见各自分工文档。
+首次后端成果在 `zhanghongyi` 分支。hanyan 从该分支的交接提交建立自己的分支，或将它合并到已有 `hanyan` 分支；具体命令见 [交接说明](docs/backend_handoff.md)。
 
 ## 运行与实验入口
 
-以下为实现完成后需要支持的入口。当前基础目录尚未包含可运行服务。
+后端已可独立构建和自测。以下是 hanyan 完成 Nginx / Compose 集成后需要支持的完整系统入口，当前尚未交付 `docker-compose.yml`。
 
 在课程虚拟机准备 Docker、Docker Compose 和 `wrk`，完整系统应支持：
 
