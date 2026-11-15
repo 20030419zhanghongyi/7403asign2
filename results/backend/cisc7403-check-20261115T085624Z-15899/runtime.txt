@@ -1,0 +1,16 @@
+Both instances use sha256:7c6008caa9ac170c51992bef7a65f67f0c2edd91af2a6b9d1960c6498f714d7d
+
+cisc7403-check-20261115T085624Z-15899-backend1: no published ports
+PID                 COMMAND
+16085               python app.py
+{"pid1": "python app.py", "threads": 1, "uid": 10001}
+
+cisc7403-check-20261115T085624Z-15899-backend2: no published ports
+PID                 COMMAND
+16161               python app.py
+{"pid1": "python app.py", "threads": 1, "uid": 10001}
+
+cisc7403-check-20261115T085624Z-15899-fallback: no published ports
+PID                 COMMAND
+16225               python app.py
+{"pid1": "python app.py", "threads": 1, "uid": 10001}

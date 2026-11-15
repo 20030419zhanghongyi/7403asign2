@@ -2,12 +2,12 @@
 
 负责人：zhanghongyi。工作分支：`zhanghongyi`。
 
-本目录将包含 `app.py`、`requirements.txt`、`Dockerfile` 和 `.dockerignore`。当前提供目录约定及构建忽略规则，后端实现由 zhanghongyi 完成。
+已完成 `app.py`、`requirements.txt`、`Dockerfile` 和 `.dockerignore`，并在课程虚拟机实测通过。完整接入步骤见 [后端交接说明](../docs/backend_handoff.md)。
 
 ## 实现约定
 
 - 使用 Python 与 Flask，监听 `0.0.0.0:5000`。
-- 读取 `INSTANCE_NAME`，未提供时使用容器 hostname。
+- 读取 `INSTANCE_NAME`，未提供或为空时使用容器 hostname。
 - `GET /` 返回 HTTP 200，例如 `{"instance":"backend1","status":"ok"}`。
 - `GET /work` 等待约 0.05 秒后返回相同结构。
 - 单服务进程，关闭请求多线程、debug 和重载器。
@@ -16,14 +16,19 @@
 
 ## 首次交接
 
-实现完成后，从仓库根目录验证以下构建入口：
+从仓库根目录构建并运行自测：
 
 ```bash
 docker build -t cisc7403-backend:v1 ./backend
+bash scripts/check_backend.sh
 ```
 
-在 `docs/backend_handoff.md` 写明启动、自测、日志查看和清理临时容器的方法，将实际自测材料保存到 `results/backend/`，并记录交接提交 SHA。
+脚本会构建镜像、创建临时网络和测试容器，验证 HTTP 行为与进程状态，输出到 `results/backend/`，最后清理本次创建的容器和网络。需在可运行 Docker 的 Linux 虚拟机上执行。
 
-交接前核对两个接口、实例名变化、约 50 ms 等待、单进程设置及日志。hanyan 应能按说明直接复现，随后接入 Nginx 与 Compose。
+镜像以 UID 10001 运行，基础镜像固定摘要，Python 直接和间接依赖固定版本。启动命令为 `python app.py`，无需在 Compose 覆盖。
+
+`EXPOSE 5000` 仅声明容器端口；Compose 中后端不应配置 `ports`。hanyan 将它们接入同一网络，通过 `backend1:5000`、`backend2:5000` 访问。
+
+按课程实验使用 Flask 开发服务器，保留单进程串行处理。不要改成默认多线程的 `flask run` 或增加 worker，否则会改变实验条件。[Flask 运行参数说明](https://flask.palletsprojects.com/en/stable/api/#flask.Flask.run)
 
 完整范围见 [zhanghongyi 分工文档](../docs/zhanghongyi_工作范围与交接说明.md)。

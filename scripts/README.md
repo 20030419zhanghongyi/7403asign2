@@ -1,6 +1,23 @@
 # 实验脚本
 
-脚本在完整系统接通后实现，并从仓库根目录运行。每份脚本应说明依赖、输入参数、输出位置，以及实验后的恢复方式。
+## 已完成：后端自测
+
+```bash
+bash scripts/check_backend.sh
+```
+
+依赖 Linux、Bash、Docker CLI 和可访问的 Docker daemon；首次构建需要访问 Docker Hub 与 PyPI。HTTP 验证使用镜像中 Python 的标准库，无需在虚拟机额外安装 Python 库。
+
+- 默认构建 `cisc7403-backend:v1`，可用 `IMAGE=其他标签 bash scripts/check_backend.sh` 覆盖。
+- 默认输出到 `results/backend/cisc7403-check-时间-PID/`；`OUTPUT=/绝对路径 bash scripts/check_backend.sh` 可指定独立输出目录。
+- 验证两个实例和 hostname 回退实例的 HTTP 状态、JSON、50 ms 等待及并发排队行为，并检查同一镜像、单进程、单线程、非 root 用户、无发布端口和请求日志。
+- 使用三个临时后端及一个临时测试客户端，仅用于自测；hanyan 的最终系统仍是 Nginx 加两个后端。
+- 成功或失败均保存日志并尝试清理本次创建的容器与网络；失败返回非零退出码。镜像和结果文件会保留。
+- 测试用例在 `backend_http_test.py`；通过包装脚本在同一 Docker 网络中运行，不能直接在宿主机解析测试服务名。
+
+## 系统集成后实现
+
+以下脚本待完整系统接通后完成；运行前记录单后端或双后端配置。
 
 | 计划脚本 | 负责人 | 主要职责 | 结果目录 |
 | --- | --- | --- | --- |

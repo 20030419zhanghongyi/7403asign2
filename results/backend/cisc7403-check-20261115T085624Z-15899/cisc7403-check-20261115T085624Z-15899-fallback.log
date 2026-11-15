@@ -1,0 +1,16 @@
+{"event": "startup", "instance": "fallback-host", "work_seconds": 0.05, "processes": 1, "threaded": false}
+ * Serving Flask app 'app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.0.4:5000
+[33mPress CTRL+C to quit[0m
+{"event": "request", "instance": "fallback-host", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.117}
+172.20.0.5 - - [15/Nov/2026 08:56:26] "GET / HTTP/1.1" 200 -
+{"event": "request", "instance": "fallback-host", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.447}
+172.20.0.5 - - [15/Nov/2026 08:56:26] "GET /work HTTP/1.1" 200 -
+{"event": "request", "instance": "fallback-host", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 51.086}
+172.20.0.5 - - [15/Nov/2026 08:56:26] "GET /work HTTP/1.1" 200 -
+{"event": "request", "instance": "fallback-host", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.272}
+172.20.0.5 - - [15/Nov/2026 08:56:26] "GET /work HTTP/1.1" 200 -
