@@ -1,0 +1,31 @@
+# macOS and editor files
+.DS_Store
+._*
+.idea/
+.vscode/
+*~
+*.swp
+
+# Python local environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+*.egg-info/
+
+# Local configuration and temporary files
+.env
+.env.*
+!.env.example
+tmp/
+temp/
+~$*
+.~lock.*#
+
+# Keep experiment outputs and final reports versioned.
+# Do not add a global *.log, *.pdf, *.docx, or results/ exclusion.
