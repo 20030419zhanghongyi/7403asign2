@@ -1,0 +1,5 @@
+$ docker compose -p cisc7403-project2 -f docker-compose.yml ps --all
+NAME                           IMAGE                 COMMAND                  SERVICE    CREATED          STATUS          PORTS
+cisc7403-project2-backend1-1   cisc7403-backend:v1   "python app.py"          backend1   11 seconds ago   Up 10 seconds   5000/tcp
+cisc7403-project2-backend2-1   cisc7403-backend:v1   "python app.py"          backend2   11 seconds ago   Up 10 seconds   5000/tcp
+cisc7403-project2-nginx-1      nginx:alpine          "/docker-entrypoint.…"   nginx      11 seconds ago   Up 10 seconds   0.0.0.0:6120->80/tcp, [::]:6120->80/tcp

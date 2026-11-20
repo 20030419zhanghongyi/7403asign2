@@ -1,0 +1,3 @@
+$ docker top 1603e0165fdc7ace81b59ee440da9dc72c080d4093caf79eabdfed4dcec0362a -eo pid,args
+PID                 COMMAND
+38738               python app.py

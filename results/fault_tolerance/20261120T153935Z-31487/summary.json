@@ -1,0 +1,50 @@
+{
+  "initial": {
+    "passed": true,
+    "requests": 20,
+    "instances": {
+      "backend2": 10,
+      "backend1": 10
+    },
+    "errors": 0,
+    "max_ms": 57.789
+  },
+  "backend1-stopped": {
+    "passed": true,
+    "requests": 30,
+    "instances": {
+      "backend2": 30
+    },
+    "errors": 0,
+    "max_ms": 1055.972
+  },
+  "backend1-restored": {
+    "passed": true,
+    "requests": 20,
+    "instances": {
+      "backend2": 10,
+      "backend1": 10
+    },
+    "errors": 0,
+    "max_ms": 56.372
+  },
+  "backend2-stopped": {
+    "passed": true,
+    "requests": 30,
+    "instances": {
+      "backend1": 30
+    },
+    "errors": 0,
+    "max_ms": 1006.319
+  },
+  "backend2-restored": {
+    "passed": true,
+    "requests": 20,
+    "instances": {
+      "backend1": 10,
+      "backend2": 10
+    },
+    "errors": 0,
+    "max_ms": 58.214
+  }
+}

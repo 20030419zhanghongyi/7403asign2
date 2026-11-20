@@ -1,0 +1,16 @@
+{
+  "backend/app.py": "a0287c01b60cb76ab1e9a5c4a5fd95bfb7a090aaa078728015bdf70ef7f6a560",
+  "backend/Dockerfile": "465d770f7d0544bef02132301fa6e2afa79e643a5b034f2df4c45e33f4ec05c5",
+  "backend/requirements.txt": "b5e5414cf4cfb8d95ef735a029e200c4c919a212a0b1cb40696009d49be6711c",
+  "backend/.dockerignore": "45305d43e72435750ad43f080f891b8d0597cbd4981a132825f15ad1f2d766bd",
+  "docker-compose.yml": "27f548198bbfbce321bfec8bc0c3c95feed674572b2969838eef32596db96300",
+  "docker-compose.single.yml": "0f845c963fa469b0a97ac70f9815d7a44994d935ac577dae647eccb18dfde2e7",
+  "nginx/nginx.conf": "bcfaeefa5130d7c7120bcc35a1748ba4d6b638449423aee0a992b9fc29e2a194",
+  "nginx/nginx.single.conf": "a54a9087c7e71cb086f1f39cbbda0c955e9d07c8d2ee312d3afa4dd3c54d07ae",
+  "scripts/experiments.py": "711160a94eca4e6eb9ff2e2a638ee40a3e38615855a0609e2a68d85992e3f4df",
+  "scripts/check_balance.sh": "adc775b2c4d313b205887831cc28ceebb57fa9ff9f3990ff4a165e09aa666bf5",
+  "scripts/check_failover.sh": "5d19aa5cefe4b8618de4cc6f748b1ab7cdb7ca96d0d1757fd59e438cf66d2a0e",
+  "scripts/benchmark.sh": "4403447065571d3a741280d194a0d9e43c349e06002aa5cfbf2a659af73661aa",
+  "scripts/set_mode.sh": "486a7d09c54bae7df42b0531d9f2f030593cd130111dfe352a045c3d55d86991",
+  "scripts/run_all.sh": "8847a66422e93d057b81a691f38fd200e62e118ae0eda2809b4649295ae5e1e8"
+}

@@ -1,0 +1,518 @@
+[
+  {
+    "utc": "2026-11-20T15:40:56.863477+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 0.909
+  },
+  {
+    "utc": "2026-11-20T15:40:57.065019+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 1.218
+  },
+  {
+    "utc": "2026-11-20T15:40:57.266373+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 2.153
+  },
+  {
+    "utc": "2026-11-20T15:40:57.469763+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 5.889
+  },
+  {
+    "utc": "2026-11-20T15:40:57.676877+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 5.341
+  },
+  {
+    "utc": "2026-11-20T15:40:57.882530+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 5.849
+  },
+  {
+    "utc": "2026-11-20T15:40:58.088744+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 3.078
+  },
+  {
+    "utc": "2026-11-20T15:40:58.292746+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 4.229
+  },
+  {
+    "utc": "2026-11-20T15:40:58.497548+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 4.41
+  },
+  {
+    "utc": "2026-11-20T15:40:58.702261+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 6.914
+  },
+  {
+    "utc": "2026-11-20T15:40:58.909522+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 7.251
+  },
+  {
+    "utc": "2026-11-20T15:40:59.117246+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 2.543
+  },
+  {
+    "utc": "2026-11-20T15:40:59.320052+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 4.221
+  },
+  {
+    "utc": "2026-11-20T15:40:59.524504+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 5.144
+  },
+  {
+    "utc": "2026-11-20T15:40:59.729896+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 4.381
+  },
+  {
+    "utc": "2026-11-20T15:40:59.934905+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 4.947
+  },
+  {
+    "utc": "2026-11-20T15:41:00.140379+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 4.435
+  },
+  {
+    "utc": "2026-11-20T15:41:00.345041+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 4.106
+  },
+  {
+    "utc": "2026-11-20T15:41:00.549372+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 4.301
+  },
+  {
+    "utc": "2026-11-20T15:41:00.754153+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 5.612
+  },
+  {
+    "utc": "2026-11-20T15:41:00.960107+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 4.437
+  },
+  {
+    "utc": "2026-11-20T15:41:01.164952+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 2.137
+  },
+  {
+    "utc": "2026-11-20T15:41:01.368190+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 4.115
+  },
+  {
+    "utc": "2026-11-20T15:41:01.572527+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 3.752
+  },
+  {
+    "utc": "2026-11-20T15:41:01.776713+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 5.341
+  },
+  {
+    "utc": "2026-11-20T15:41:01.982325+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 5.415
+  },
+  {
+    "utc": "2026-11-20T15:41:02.188244+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 4.832
+  },
+  {
+    "utc": "2026-11-20T15:41:02.393832+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 1.693
+  },
+  {
+    "utc": "2026-11-20T15:41:02.596061+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 1.61
+  },
+  {
+    "utc": "2026-11-20T15:41:02.798801+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 5.541
+  },
+  {
+    "utc": "2026-11-20T15:41:03.004568+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 5.073
+  },
+  {
+    "utc": "2026-11-20T15:41:03.210781+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 1.913
+  },
+  {
+    "utc": "2026-11-20T15:41:03.412868+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 2.752
+  },
+  {
+    "utc": "2026-11-20T15:41:03.616012+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 20.247
+  },
+  {
+    "utc": "2026-11-20T15:41:03.837213+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 2.803
+  },
+  {
+    "utc": "2026-11-20T15:41:04.040247+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 3.995
+  },
+  {
+    "utc": "2026-11-20T15:41:04.244687+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 4.654
+  },
+  {
+    "utc": "2026-11-20T15:41:04.449554+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 3.986
+  },
+  {
+    "utc": "2026-11-20T15:41:04.653773+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 4.338
+  },
+  {
+    "utc": "2026-11-20T15:41:04.858411+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 3.987
+  },
+  {
+    "utc": "2026-11-20T15:41:05.063169+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 6.531
+  },
+  {
+    "utc": "2026-11-20T15:41:05.270155+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 1.557
+  },
+  {
+    "utc": "2026-11-20T15:41:05.472356+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend2",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 8.016
+  }
+]

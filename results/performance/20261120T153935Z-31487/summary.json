@@ -1,0 +1,87 @@
+{
+  "command": [
+    "wrk",
+    "-t2",
+    "-c20",
+    "-d10s",
+    "--timeout",
+    "5s",
+    "--latency",
+    "http://127.0.0.1:6120/work"
+  ],
+  "warmup_seconds": 3,
+  "aggregation": "Arithmetic mean of three wrk-reported trial values per mode",
+  "trials": [
+    {
+      "trial": 1,
+      "mode": "single",
+      "started_utc": "2026-11-20T15:41:24.430946+00:00",
+      "requests_per_sec": 18.81,
+      "avg_latency_ms": 1010.0,
+      "requests": 189,
+      "socket_errors": 0,
+      "non_2xx_3xx": 0
+    },
+    {
+      "trial": 1,
+      "mode": "dual",
+      "started_utc": "2026-11-20T15:42:02.985354+00:00",
+      "requests_per_sec": 37.52,
+      "avg_latency_ms": 515.99,
+      "requests": 378,
+      "socket_errors": 0,
+      "non_2xx_3xx": 0
+    },
+    {
+      "trial": 2,
+      "mode": "single",
+      "started_utc": "2026-11-20T15:42:30.326796+00:00",
+      "requests_per_sec": 18.84,
+      "avg_latency_ms": 1010.0,
+      "requests": 189,
+      "socket_errors": 0,
+      "non_2xx_3xx": 0
+    },
+    {
+      "trial": 2,
+      "mode": "dual",
+      "started_utc": "2026-11-20T15:43:08.766429+00:00",
+      "requests_per_sec": 37.41,
+      "avg_latency_ms": 519.63,
+      "requests": 376,
+      "socket_errors": 0,
+      "non_2xx_3xx": 0
+    },
+    {
+      "trial": 3,
+      "mode": "single",
+      "started_utc": "2026-11-20T15:43:36.069077+00:00",
+      "requests_per_sec": 18.82,
+      "avg_latency_ms": 1010.0,
+      "requests": 189,
+      "socket_errors": 0,
+      "non_2xx_3xx": 0
+    },
+    {
+      "trial": 3,
+      "mode": "dual",
+      "started_utc": "2026-11-20T15:44:14.821034+00:00",
+      "requests_per_sec": 37.67,
+      "avg_latency_ms": 516.02,
+      "requests": 378,
+      "socket_errors": 0,
+      "non_2xx_3xx": 0
+    }
+  ],
+  "mean": {
+    "single": {
+      "requests_per_sec": 18.823,
+      "avg_latency_ms": 1010.0
+    },
+    "dual": {
+      "requests_per_sec": 37.533,
+      "avg_latency_ms": 517.213
+    }
+  },
+  "throughput_ratio": 1.994
+}

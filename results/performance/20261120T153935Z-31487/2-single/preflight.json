@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "requests": 10,
+  "instances": {
+    "backend1": 10
+  },
+  "errors": 0,
+  "max_ms": 58.982
+}

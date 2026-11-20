@@ -1,0 +1,10 @@
+{"utc": "2026-11-20T15:41:57.174706+00:00", "phase": "preflight", "path": "/", "status": 200, "body": {"instance": "backend2", "status": "ok"}, "content_type": "application/json", "elapsed_ms": 1.698}
+{"utc": "2026-11-20T15:41:57.226568+00:00", "phase": "preflight", "path": "/work", "status": 200, "body": {"instance": "backend1", "status": "ok"}, "content_type": "application/json", "elapsed_ms": 51.753}
+{"utc": "2026-11-20T15:41:57.328453+00:00", "phase": "preflight", "path": "/", "status": 200, "body": {"instance": "backend2", "status": "ok"}, "content_type": "application/json", "elapsed_ms": 1.523}
+{"utc": "2026-11-20T15:41:57.380121+00:00", "phase": "preflight", "path": "/work", "status": 200, "body": {"instance": "backend1", "status": "ok"}, "content_type": "application/json", "elapsed_ms": 52.524}
+{"utc": "2026-11-20T15:41:57.482800+00:00", "phase": "preflight", "path": "/", "status": 200, "body": {"instance": "backend2", "status": "ok"}, "content_type": "application/json", "elapsed_ms": 3.269}
+{"utc": "2026-11-20T15:41:57.536289+00:00", "phase": "preflight", "path": "/work", "status": 200, "body": {"instance": "backend1", "status": "ok"}, "content_type": "application/json", "elapsed_ms": 53.98}
+{"utc": "2026-11-20T15:41:57.640440+00:00", "phase": "preflight", "path": "/", "status": 200, "body": {"instance": "backend2", "status": "ok"}, "content_type": "application/json", "elapsed_ms": 4.38}
+{"utc": "2026-11-20T15:41:57.695184+00:00", "phase": "preflight", "path": "/work", "status": 200, "body": {"instance": "backend1", "status": "ok"}, "content_type": "application/json", "elapsed_ms": 56.421}
+{"utc": "2026-11-20T15:41:57.802007+00:00", "phase": "preflight", "path": "/", "status": 200, "body": {"instance": "backend2", "status": "ok"}, "content_type": "application/json", "elapsed_ms": 3.674}
+{"utc": "2026-11-20T15:41:57.856140+00:00", "phase": "preflight", "path": "/work", "status": 200, "body": {"instance": "backend1", "status": "ok"}, "content_type": "application/json", "elapsed_ms": 57.679}

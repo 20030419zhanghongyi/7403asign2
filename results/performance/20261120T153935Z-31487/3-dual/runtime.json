@@ -1,0 +1,28 @@
+[
+  {
+    "service": "backend1",
+    "image": "sha256:62ba79dabc8e3fc3f6fc5cd271a352c3337ec8b059967beb393dc9d86944de47",
+    "ports": {},
+    "threads": 1,
+    "cmd": "python app.py"
+  },
+  {
+    "service": "backend2",
+    "image": "sha256:62ba79dabc8e3fc3f6fc5cd271a352c3337ec8b059967beb393dc9d86944de47",
+    "ports": {},
+    "threads": 1,
+    "cmd": "python app.py"
+  },
+  {
+    "service": "nginx",
+    "image": "sha256:fb4658584bd9a916ffb6f6e365f97c25cfdb2923801f551ea08356e695f14ff7",
+    "ports": {
+      "80/tcp": [
+        {
+          "HostIp": "",
+          "HostPort": "6120"
+        }
+      ]
+    }
+  }
+]

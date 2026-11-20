@@ -1,0 +1,256 @@
+$ docker compose -p cisc7403-project2 -f docker-compose.yml logs --no-color --timestamps
+backend2-1  | 2026-11-20T15:39:41.044491766Z {"event": "startup", "instance": "backend2", "work_seconds": 0.05, "processes": 1, "threaded": false}
+backend2-1  | 2026-11-20T15:39:41.044513391Z  * Serving Flask app 'app'
+backend2-1  | 2026-11-20T15:39:41.044514724Z  * Debug mode: off
+backend2-1  | 2026-11-20T15:39:41.048656311Z [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+backend2-1  | 2026-11-20T15:39:41.048673811Z  * Running on all addresses (0.0.0.0)
+backend2-1  | 2026-11-20T15:39:41.048674603Z  * Running on http://127.0.0.1:5000
+backend2-1  | 2026-11-20T15:39:41.048675144Z  * Running on http://172.20.0.3:5000
+backend2-1  | 2026-11-20T15:39:41.048675728Z [33mPress CTRL+C to quit[0m
+backend2-1  | 2026-11-20T15:39:51.099526174Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.257}
+backend2-1  | 2026-11-20T15:39:51.102314385Z 172.20.0.4 - - [20/Nov/2026 15:39:51] "GET / HTTP/1.1" 200 -
+nginx-1     | 2026-11-20T15:39:40.877912953Z /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+backend2-1  | 2026-11-20T15:39:51.308459853Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.039}
+nginx-1     | 2026-11-20T15:39:40.878176579Z /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx-1     | 2026-11-20T15:39:40.879751997Z /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx-1     | 2026-11-20T15:39:40.883338250Z 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx-1     | 2026-11-20T15:39:40.889961339Z 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx-1     | 2026-11-20T15:39:40.890023131Z /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx-1     | 2026-11-20T15:39:40.890059089Z /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx-1     | 2026-11-20T15:39:40.891106048Z /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx-1     | 2026-11-20T15:39:40.893705384Z /docker-entrypoint.sh: Configuration complete; ready for start up
+nginx-1     | 2026-11-20T15:39:40.942216926Z 2026/11/20 15:39:40 [error] 29#29: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://172.20.0.2:5000/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:40.942487093Z 172.20.0.1 - - [20/Nov/2026:15:39:40 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:40.942492135Z 2026/11/20 15:39:40 [error] 29#29: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://172.20.0.3:5000/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:41.143273643Z 2026/11/20 15:39:41 [error] 29#29: *4 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:41.143290060Z 172.20.0.1 - - [20/Nov/2026:15:39:41 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:41.345821903Z 172.20.0.1 - - [20/Nov/2026:15:39:41 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:41.345833153Z 2026/11/20 15:39:41 [error] 29#29: *5 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:41.548982664Z 172.20.0.1 - - [20/Nov/2026:15:39:41 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:41.548987789Z 2026/11/20 15:39:41 [error] 29#29: *6 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:41.750877006Z 172.20.0.1 - - [20/Nov/2026:15:39:41 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:41.751081257Z 2026/11/20 15:39:41 [error] 29#29: *7 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:41.954425100Z 2026/11/20 15:39:41 [error] 29#29: *8 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:41.954535892Z 172.20.0.1 - - [20/Nov/2026:15:39:41 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:42.158895612Z 2026/11/20 15:39:42 [error] 29#29: *9 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:42.159015029Z 172.20.0.1 - - [20/Nov/2026:15:39:42 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:42.362244622Z 172.20.0.1 - - [20/Nov/2026:15:39:42 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:42.362263539Z 2026/11/20 15:39:42 [error] 29#29: *10 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:42.565195340Z 172.20.0.1 - - [20/Nov/2026:15:39:42 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:42.565220216Z 2026/11/20 15:39:42 [error] 29#29: *11 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:42.768975268Z 172.20.0.1 - - [20/Nov/2026:15:39:42 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+backend2-1  | 2026-11-20T15:39:51.308540395Z 172.20.0.4 - - [20/Nov/2026 15:39:51] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:39:51.934068932Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.037}
+backend2-1  | 2026-11-20T15:39:51.934162057Z 172.20.0.4 - - [20/Nov/2026 15:39:51] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:39:52.089630898Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.06}
+backend2-1  | 2026-11-20T15:39:52.089663440Z 172.20.0.4 - - [20/Nov/2026 15:39:52] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:39:52.246445116Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.071}
+backend2-1  | 2026-11-20T15:39:52.246491199Z 172.20.0.4 - - [20/Nov/2026 15:39:52] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:39:52.409154505Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.166}
+backend2-1  | 2026-11-20T15:39:52.410385923Z 172.20.0.4 - - [20/Nov/2026 15:39:52] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:39:52.571196727Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.11}
+backend2-1  | 2026-11-20T15:39:52.571247686Z 172.20.0.4 - - [20/Nov/2026 15:39:52] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:39:52.731719573Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.107}
+backend2-1  | 2026-11-20T15:39:52.732242198Z 172.20.0.4 - - [20/Nov/2026 15:39:52] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:39:41.002759396Z {"event": "startup", "instance": "backend1", "work_seconds": 0.05, "processes": 1, "threaded": false}
+backend1-1  | 2026-11-20T15:39:41.002860021Z  * Serving Flask app 'app'
+backend1-1  | 2026-11-20T15:39:41.002879313Z  * Debug mode: off
+backend1-1  | 2026-11-20T15:39:41.007255566Z [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+backend1-1  | 2026-11-20T15:39:41.007264941Z  * Running on all addresses (0.0.0.0)
+backend1-1  | 2026-11-20T15:39:41.007265941Z  * Running on http://127.0.0.1:5000
+backend1-1  | 2026-11-20T15:39:41.007266691Z  * Running on http://172.20.0.2:5000
+backend1-1  | 2026-11-20T15:39:41.007267316Z [33mPress CTRL+C to quit[0m
+nginx-1     | 2026-11-20T15:39:42.768914268Z 2026/11/20 15:39:42 [error] 29#29: *12 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:42.972180403Z 172.20.0.1 - - [20/Nov/2026:15:39:42 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:42.972251736Z 2026/11/20 15:39:42 [error] 29#29: *13 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:43.175177746Z 2026/11/20 15:39:43 [error] 29#29: *14 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:43.175568246Z 172.20.0.1 - - [20/Nov/2026:15:39:43 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:43.377171130Z 2026/11/20 15:39:43 [error] 29#29: *15 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:43.377223088Z 172.20.0.1 - - [20/Nov/2026:15:39:43 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:43.578173471Z 2026/11/20 15:39:43 [error] 29#29: *16 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:43.578188513Z 172.20.0.1 - - [20/Nov/2026:15:39:43 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:43.780436064Z 172.20.0.1 - - [20/Nov/2026:15:39:43 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:43.780485272Z 2026/11/20 15:39:43 [error] 29#29: *17 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:43.984178866Z 172.20.0.1 - - [20/Nov/2026:15:39:43 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:43.984224657Z 2026/11/20 15:39:43 [error] 29#29: *18 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:44.187082958Z 2026/11/20 15:39:44 [error] 29#29: *19 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:44.187325375Z 172.20.0.1 - - [20/Nov/2026:15:39:44 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:44.390479885Z 2026/11/20 15:39:44 [error] 29#29: *20 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:44.390555218Z 172.20.0.1 - - [20/Nov/2026:15:39:44 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:44.594207603Z 2026/11/20 15:39:44 [error] 29#29: *21 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:44.594207562Z 172.20.0.1 - - [20/Nov/2026:15:39:44 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:44.797022154Z 172.20.0.1 - - [20/Nov/2026:15:39:44 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:44.797115071Z 2026/11/20 15:39:44 [error] 29#29: *22 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:44.999822789Z 172.20.0.1 - - [20/Nov/2026:15:39:44 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:45.000106622Z 2026/11/20 15:39:44 [error] 29#29: *23 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:45.202302047Z 172.20.0.1 - - [20/Nov/2026:15:39:45 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:45.202373589Z 2026/11/20 15:39:45 [error] 29#29: *24 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:45.404701806Z 172.20.0.1 - - [20/Nov/2026:15:39:45 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:45.404737431Z 2026/11/20 15:39:45 [error] 29#29: *25 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:45.607050898Z 172.20.0.1 - - [20/Nov/2026:15:39:45 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:45.607076189Z 2026/11/20 15:39:45 [error] 29#29: *26 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:45.810185990Z 2026/11/20 15:39:45 [error] 29#29: *27 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:45.810283157Z 172.20.0.1 - - [20/Nov/2026:15:39:45 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:46.012711374Z 172.20.0.1 - - [20/Nov/2026:15:39:46 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:46.012746874Z 2026/11/20 15:39:46 [error] 29#29: *28 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:46.215357716Z 172.20.0.1 - - [20/Nov/2026:15:39:46 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:46.215431299Z 2026/11/20 15:39:46 [error] 29#29: *29 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:46.418311100Z 2026/11/20 15:39:46 [error] 29#29: *30 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:46.418624392Z 172.20.0.1 - - [20/Nov/2026:15:39:46 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:46.622149734Z 2026/11/20 15:39:46 [error] 29#29: *31 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:46.622258609Z 172.20.0.1 - - [20/Nov/2026:15:39:46 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:46.826243536Z 2026/11/20 15:39:46 [error] 29#29: *32 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:46.826236286Z 172.20.0.1 - - [20/Nov/2026:15:39:46 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:47.029511712Z 2026/11/20 15:39:47 [error] 29#29: *33 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:47.029505212Z 172.20.0.1 - - [20/Nov/2026:15:39:47 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:47.232784387Z 172.20.0.1 - - [20/Nov/2026:15:39:47 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:47.232856720Z 2026/11/20 15:39:47 [error] 29#29: *34 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:47.435387645Z 172.20.0.1 - - [20/Nov/2026:15:39:47 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:47.435392854Z 2026/11/20 15:39:47 [error] 29#29: *35 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:47.637842820Z 2026/11/20 15:39:47 [error] 29#29: *36 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:47.637842820Z 172.20.0.1 - - [20/Nov/2026:15:39:47 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:47.841483579Z 172.20.0.1 - - [20/Nov/2026:15:39:47 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:47.841559829Z 2026/11/20 15:39:47 [error] 29#29: *37 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:48.044183921Z 2026/11/20 15:39:48 [error] 29#29: *38 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:48.044277796Z 172.20.0.1 - - [20/Nov/2026:15:39:48 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:48.247902513Z 172.20.0.1 - - [20/Nov/2026:15:39:48 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:48.248107180Z 2026/11/20 15:39:48 [error] 29#29: *39 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:48.452355439Z 172.20.0.1 - - [20/Nov/2026:15:39:48 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:48.452427981Z 2026/11/20 15:39:48 [error] 29#29: *40 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:48.656152115Z 2026/11/20 15:39:48 [error] 29#29: *41 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:48.656283615Z 172.20.0.1 - - [20/Nov/2026:15:39:48 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:48.859097123Z 2026/11/20 15:39:48 [error] 29#29: *42 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:48.859292873Z 172.20.0.1 - - [20/Nov/2026:15:39:48 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:49.062400298Z 172.20.0.1 - - [20/Nov/2026:15:39:49 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:49.062429340Z 2026/11/20 15:39:49 [error] 29#29: *43 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:49.264779139Z 172.20.0.1 - - [20/Nov/2026:15:39:49 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:49.264781431Z 2026/11/20 15:39:49 [error] 29#29: *44 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:49.466744271Z 172.20.0.1 - - [20/Nov/2026:15:39:49 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:49.466756688Z 2026/11/20 15:39:49 [error] 29#29: *45 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:49.669579654Z 2026/11/20 15:39:49 [error] 29#29: *46 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:49.669600987Z 172.20.0.1 - - [20/Nov/2026:15:39:49 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:49.872539870Z 172.20.0.1 - - [20/Nov/2026:15:39:49 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:49.872540537Z 2026/11/20 15:39:49 [error] 29#29: *47 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:50.076160004Z 2026/11/20 15:39:50 [error] 29#29: *48 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:50.076173504Z 172.20.0.1 - - [20/Nov/2026:15:39:50 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+backend2-1  | 2026-11-20T15:39:52.895280213Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.151}
+nginx-1     | 2026-11-20T15:39:50.280264346Z 2026/11/20 15:39:50 [error] 29#29: *49 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:50.280604471Z 172.20.0.1 - - [20/Nov/2026:15:39:50 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+backend2-1  | 2026-11-20T15:39:52.895646255Z 172.20.0.4 - - [20/Nov/2026 15:39:52] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:39:53.058088352Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.119}
+backend2-1  | 2026-11-20T15:39:53.058304894Z 172.20.0.4 - - [20/Nov/2026 15:39:53] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:39:53.218238614Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.101}
+nginx-1     | 2026-11-20T15:39:50.483857937Z 172.20.0.1 - - [20/Nov/2026:15:39:50 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:50.484254354Z 2026/11/20 15:39:50 [error] 29#29: *50 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:50.687419570Z 2026/11/20 15:39:50 [error] 29#29: *51 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+backend1-1  | 2026-11-20T15:39:51.510562610Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.059}
+backend1-1  | 2026-11-20T15:39:51.510793902Z 172.20.0.4 - - [20/Nov/2026 15:39:51] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:39:52.036267644Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.472}
+backend1-1  | 2026-11-20T15:39:52.036459103Z 172.20.0.4 - - [20/Nov/2026 15:39:52] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:39:52.192588653Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.245}
+backend1-1  | 2026-11-20T15:39:52.192772153Z 172.20.0.4 - - [20/Nov/2026 15:39:52] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:39:52.350767955Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.533}
+backend1-1  | 2026-11-20T15:39:52.350890789Z 172.20.0.4 - - [20/Nov/2026 15:39:52] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:39:52.515583763Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.656}
+backend1-1  | 2026-11-20T15:39:52.516201888Z 172.20.0.4 - - [20/Nov/2026 15:39:52] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:39:52.676836526Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.653}
+backend1-1  | 2026-11-20T15:39:52.677048068Z 172.20.0.4 - - [20/Nov/2026 15:39:52] "GET /work HTTP/1.1" 200 -
+nginx-1     | 2026-11-20T15:39:50.688479696Z 172.20.0.1 - - [20/Nov/2026:15:39:50 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:50.890972579Z 172.20.0.1 - - [20/Nov/2026:15:39:50 +0000] "GET / HTTP/1.1" 502 157 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:50.890968954Z 2026/11/20 15:39:50 [error] 29#29: *52 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://backend_pool/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:39:51.104772762Z 172.20.0.1 - - [20/Nov/2026:15:39:51 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:51.308662604Z 172.20.0.1 - - [20/Nov/2026:15:39:51 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:51.510876402Z 172.20.0.1 - - [20/Nov/2026:15:39:51 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:51.934379640Z 172.20.0.1 - - [20/Nov/2026:15:39:51 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:52.036703061Z 172.20.0.1 - - [20/Nov/2026:15:39:52 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:52.089832607Z 172.20.0.1 - - [20/Nov/2026:15:39:52 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:52.193071362Z 172.20.0.1 - - [20/Nov/2026:15:39:52 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:52.246825116Z 172.20.0.1 - - [20/Nov/2026:15:39:52 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:52.352391207Z 172.20.0.1 - - [20/Nov/2026:15:39:52 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:52.410725048Z 172.20.0.1 - - [20/Nov/2026:15:39:52 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:52.517509848Z 172.20.0.1 - - [20/Nov/2026:15:39:52 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:52.571889603Z 172.20.0.1 - - [20/Nov/2026:15:39:52 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:52.677693735Z 172.20.0.1 - - [20/Nov/2026:15:39:52 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:52.733232116Z 172.20.0.1 - - [20/Nov/2026:15:39:52 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:52.839682749Z 172.20.0.1 - - [20/Nov/2026:15:39:52 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+backend1-1  | 2026-11-20T15:39:52.838273706Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.627}
+backend2-1  | 2026-11-20T15:39:53.218400823Z 172.20.0.4 - - [20/Nov/2026 15:39:53] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:39:52.838756331Z 172.20.0.4 - - [20/Nov/2026 15:39:52] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:39:53.001910554Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.998}
+backend1-1  | 2026-11-20T15:39:53.002643222Z 172.20.0.4 - - [20/Nov/2026 15:39:53] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:39:53.163346276Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.426}
+backend1-1  | 2026-11-20T15:39:53.163502734Z 172.20.0.4 - - [20/Nov/2026 15:39:53] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:39:53.324205371Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.589}
+backend1-1  | 2026-11-20T15:39:53.325254914Z 172.20.0.4 - - [20/Nov/2026 15:39:53] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:39:53.484550217Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.304}
+backend1-1  | 2026-11-20T15:39:53.484687675Z 172.20.0.4 - - [20/Nov/2026 15:39:53] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:39:53.640908517Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.442}
+backend1-1  | 2026-11-20T15:39:53.641280309Z 172.20.0.4 - - [20/Nov/2026 15:39:53] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:39:53.803188489Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.658}
+backend1-1  | 2026-11-20T15:39:53.803468865Z 172.20.0.4 - - [20/Nov/2026 15:39:53] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:39:53.967099588Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 51.315}
+backend1-1  | 2026-11-20T15:39:53.967407005Z 172.20.0.4 - - [20/Nov/2026 15:39:53] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:39:54.128019267Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.607}
+backend1-1  | 2026-11-20T15:39:54.128242100Z 172.20.0.4 - - [20/Nov/2026 15:39:54] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:39:54.291175489Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.801}
+backend1-1  | 2026-11-20T15:39:54.291589073Z 172.20.0.4 - - [20/Nov/2026 15:39:54] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:39:54.452779294Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.749}
+backend1-1  | 2026-11-20T15:39:54.453280878Z 172.20.0.4 - - [20/Nov/2026 15:39:54] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:39:54.613324306Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.889}
+backend1-1  | 2026-11-20T15:39:54.613533056Z 172.20.0.4 - - [20/Nov/2026 15:39:54] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:39:54.778007488Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 51.492}
+backend1-1  | 2026-11-20T15:39:54.778749447Z 172.20.0.4 - - [20/Nov/2026 15:39:54] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:39:54.937902958Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.605}
+backend1-1  | 2026-11-20T15:39:54.938683750Z 172.20.0.4 - - [20/Nov/2026 15:39:54] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:39:55.100729513Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.676}
+backend1-1  | 2026-11-20T15:39:55.100997430Z 172.20.0.4 - - [20/Nov/2026 15:39:55] "GET /work HTTP/1.1" 200 -
+nginx-1     | 2026-11-20T15:39:52.896191047Z 172.20.0.1 - - [20/Nov/2026:15:39:52 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:53.003826139Z 172.20.0.1 - - [20/Nov/2026:15:39:53 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:53.058759686Z 172.20.0.1 - - [20/Nov/2026:15:39:53 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:53.164483568Z 172.20.0.1 - - [20/Nov/2026:15:39:53 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:53.218864531Z 172.20.0.1 - - [20/Nov/2026:15:39:53 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:53.326142498Z 172.20.0.1 - - [20/Nov/2026:15:39:53 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:53.382045671Z 172.20.0.1 - - [20/Nov/2026:15:39:53 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:53.485123384Z 172.20.0.1 - - [20/Nov/2026:15:39:53 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:53.537677429Z 172.20.0.1 - - [20/Nov/2026:15:39:53 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:53.641854393Z 172.20.0.1 - - [20/Nov/2026:15:39:53 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:53.697424649Z 172.20.0.1 - - [20/Nov/2026:15:39:53 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:53.804540699Z 172.20.0.1 - - [20/Nov/2026:15:39:53 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:53.861437789Z 172.20.0.1 - - [20/Nov/2026:15:39:53 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:53.968387922Z 172.20.0.1 - - [20/Nov/2026:15:39:53 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:54.022507260Z 172.20.0.1 - - [20/Nov/2026:15:39:54 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:54.128845809Z 172.20.0.1 - - [20/Nov/2026:15:39:54 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:54.185119899Z 172.20.0.1 - - [20/Nov/2026:15:39:54 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:54.292643449Z 172.20.0.1 - - [20/Nov/2026:15:39:54 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:54.349072580Z 172.20.0.1 - - [20/Nov/2026:15:39:54 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:54.454051253Z 172.20.0.1 - - [20/Nov/2026:15:39:54 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:54.509000675Z 172.20.0.1 - - [20/Nov/2026:15:39:54 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:54.614803432Z 172.20.0.1 - - [20/Nov/2026:15:39:54 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:54.671570606Z 172.20.0.1 - - [20/Nov/2026:15:39:54 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:54.778860197Z 172.20.0.1 - - [20/Nov/2026:15:39:54 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:54.832855827Z 172.20.0.1 - - [20/Nov/2026:15:39:54 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:54.939076417Z 172.20.0.1 - - [20/Nov/2026:15:39:54 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:54.996786925Z 172.20.0.1 - - [20/Nov/2026:15:39:54 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:39:55.101899139Z 172.20.0.1 - - [20/Nov/2026:15:39:55 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+backend2-1  | 2026-11-20T15:39:53.381588171Z 172.20.0.4 - - [20/Nov/2026 15:39:53] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:39:53.381604379Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.151}
+backend2-1  | 2026-11-20T15:39:53.537436179Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.058}
+backend2-1  | 2026-11-20T15:39:53.537573221Z 172.20.0.4 - - [20/Nov/2026 15:39:53] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:39:53.696670773Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.107}
+backend2-1  | 2026-11-20T15:39:53.696774440Z 172.20.0.4 - - [20/Nov/2026 15:39:53] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:39:53.860409580Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.137}
+backend2-1  | 2026-11-20T15:39:53.860616663Z 172.20.0.4 - - [20/Nov/2026 15:39:53] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:39:54.021743093Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.106}
+backend2-1  | 2026-11-20T15:39:54.021888843Z 172.20.0.4 - - [20/Nov/2026 15:39:54] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:39:54.183640106Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.288}
+backend2-1  | 2026-11-20T15:39:54.183796523Z 172.20.0.4 - - [20/Nov/2026 15:39:54] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:39:54.347752746Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.155}
+backend2-1  | 2026-11-20T15:39:54.348262371Z 172.20.0.4 - - [20/Nov/2026 15:39:54] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:39:54.508412300Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.138}
+backend2-1  | 2026-11-20T15:39:54.508474425Z 172.20.0.4 - - [20/Nov/2026 15:39:54] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:39:54.670548896Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.275}
+backend2-1  | 2026-11-20T15:39:54.670741688Z 172.20.0.4 - - [20/Nov/2026 15:39:54] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:39:54.832418493Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.245}
+backend2-1  | 2026-11-20T15:39:54.832471243Z 172.20.0.4 - - [20/Nov/2026 15:39:54] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:39:54.996344425Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.248}
+backend2-1  | 2026-11-20T15:39:54.996459133Z 172.20.0.4 - - [20/Nov/2026 15:39:54] "GET / HTTP/1.1" 200 -

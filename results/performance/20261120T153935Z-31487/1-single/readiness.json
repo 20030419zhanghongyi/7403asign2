@@ -1,0 +1,22 @@
+[
+  {
+    "utc": "2026-11-20T15:41:18.108165+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 0.862
+  },
+  {
+    "utc": "2026-11-20T15:41:18.309149+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 1.792
+  }
+]

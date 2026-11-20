@@ -1,19 +1,8 @@
-# 分工与交接文档
+# 项目说明
 
-两人的工作范围和接口约定：
-
-- [zhanghongyi 工作范围与交接说明](zhanghongyi_工作范围与交接说明.md)
-- [hanyan 工作范围与交接说明](hanyan_工作范围与交接说明.md)
-
-已完成 [后端交接说明](backend_handoff.md)，包含首次交接的构建、验收、环境和队友接入步骤。
-
-文档进度：
-
-| 文件 | 负责人 | 完成时间与内容 |
-| --- | --- | --- |
-| `backend_handoff.md` | zhanghongyi | 已完成首次后端交接；附真实虚拟机自测证据 |
-| `integration_runbook.md` | hanyan | 系统接通后，记录一键启动、单后端和双后端切换、故障与恢复方法 |
-| `report_zhanghongyi.md` | zhanghongyi | 后端与镜像、性能实验、结果分析及实际贡献 |
-| `report_hanyan.md` | hanyan | 架构、Nginx 与 Compose、负载均衡及容错实验、实际贡献 |
-
-交接时提供分支名、明确的提交 SHA、操作说明及实际验证记录。最终报告由双方核对后合并到 `report/`，正文不超过 3 页。
+- [后端交接说明](backend_handoff.md)：首次后端交付和原始自测。
+- [集成运行说明](integration_runbook.md)：默认启动、两种模式、实验与恢复。
+- [教师要求对应表](requirements_checklist.md)：最终交付与证据。
+- [ZHANG HONGYI 章节](report_zhanghongyi.md)：后端、镜像与性能讨论。
+- [HAN YAN 章节](report_hanyan.md)：架构、代理、集成和容错讨论。
+- 两份“工作范围与交接说明”保留原始约半份工作量的计划；实际交付与贡献以最终报告和提交记录为准。

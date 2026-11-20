@@ -1,0 +1,85 @@
+$ docker compose -p cisc7403-project2 -f docker-compose.yml up --build -d --remove-orphans
+ Image cisc7403-backend:v1 Building 
+ Image cisc7403-backend:v1 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.05kB done
+#1 DONE 0.0s
+
+#2 [backend1 internal] load build definition from Dockerfile
+#2 transferring dockerfile: 522B done
+#2 DONE 0.0s
+
+#3 [backend2 internal] load metadata for docker.io/library/python:3.12-slim-bookworm@sha256:935c3c5b12357a7e10caa9c1e6ca5692344d97cf229832ef584be2cec9fc03df
+#3 DONE 0.0s
+
+#4 [backend2 internal] load .dockerignore
+#4 transferring context: 154B done
+#4 DONE 0.0s
+
+#5 [backend1 internal] load build context
+#5 transferring context: 64B done
+#5 DONE 0.0s
+
+#6 [backend1 1/6] FROM docker.io/library/python:3.12-slim-bookworm@sha256:935c3c5b12357a7e10caa9c1e6ca5692344d97cf229832ef584be2cec9fc03df
+#6 resolve docker.io/library/python:3.12-slim-bookworm@sha256:935c3c5b12357a7e10caa9c1e6ca5692344d97cf229832ef584be2cec9fc03df done
+#6 DONE 0.0s
+
+#7 [backend1 2/6] WORKDIR /app
+#7 CACHED
+
+#8 [backend1 3/6] COPY requirements.txt ./
+#8 CACHED
+
+#9 [backend1 4/6] RUN pip install --no-cache-dir -r requirements.txt && pip check
+#9 CACHED
+
+#10 [backend1 5/6] RUN groupadd --gid 10001 app && useradd --uid 10001 --gid app --no-create-home app
+#10 CACHED
+
+#11 [backend1 6/6] COPY --chown=app:app app.py ./
+#11 CACHED
+
+#12 [backend1] exporting to image
+#12 exporting layers done
+#12 exporting manifest sha256:48da27760a17bff27ca6cace7fbb1b673c47de5719b8f0c6d16162c462c9c4a4 done
+#12 exporting config sha256:e31b2439a48e4d7418a067d26a3103789f81abd71e9e00aa4666df8dd4d9dfeb done
+#12 exporting attestation manifest sha256:94fdbfed17cbe7aee733542d23e7dd263bb6d07b2d2063f16dddc3d9433c0604 done
+#12 exporting manifest list sha256:2053d1716e0d6733edeebe77c75bebbbbf7409ea4db476f3fe0efaeb633c7a84 done
+#12 naming to docker.io/library/cisc7403-backend:v1 done
+#12 unpacking to docker.io/library/cisc7403-backend:v1
+#12 unpacking to docker.io/library/cisc7403-backend:v1 done
+#12 DONE 0.0s
+
+#13 [backend2] exporting to image
+#13 exporting layers done
+#13 exporting manifest sha256:ba4d1c301ac8c9dc9b5fbb918cf9c564c507cf38a094db243d96ceb87d99b137 done
+#13 exporting config sha256:31b511700339a1e5fd74b30875aa651b235213b5c7123cc3baa02f9a1fdb680e done
+#13 exporting attestation manifest sha256:1b83cb868d7e61bfaf82daa4b1ae7ed065c294a7f88b21388cbe6089297748e0 0.0s done
+#13 exporting manifest list sha256:81c3bfc2d85e0f7194aeb57a900f7b7a229e5c7328a14a64ff531e4d37e35aed done
+#13 naming to docker.io/library/cisc7403-backend:v1 done
+#13 unpacking to docker.io/library/cisc7403-backend:v1 done
+#13 DONE 0.1s
+
+#14 [backend1] resolving provenance for metadata file
+#14 DONE 0.0s
+
+#15 [backend2] resolving provenance for metadata file
+#15 DONE 0.0s
+ Image cisc7403-backend:v1 Built 
+ Image cisc7403-backend:v1 Built 
+ Network cisc7403-project2_app_net Creating 
+ Network cisc7403-project2_app_net Creating 
+ Network cisc7403-project2_app_net Created 
+ Network cisc7403-project2_app_net Created 
+ Container cisc7403-project2-backend2-1 Creating 
+ Container cisc7403-project2-backend1-1 Creating 
+ Container cisc7403-project2-backend1-1 Created 
+ Container cisc7403-project2-backend2-1 Created 
+ Container cisc7403-project2-nginx-1 Creating 
+ Container cisc7403-project2-nginx-1 Created 
+ Container cisc7403-project2-backend2-1 Starting 
+ Container cisc7403-project2-backend1-1 Starting 
+ Container cisc7403-project2-backend2-1 Started 
+ Container cisc7403-project2-backend1-1 Started 
+ Container cisc7403-project2-nginx-1 Starting 
+ Container cisc7403-project2-nginx-1 Started 

@@ -1,0 +1,3 @@
+$ docker compose -p cisc7403-project2 -f docker-compose.yml start backend2
+ Container cisc7403-project2-backend2-1 Starting 
+ Container cisc7403-project2-backend2-1 Started 
