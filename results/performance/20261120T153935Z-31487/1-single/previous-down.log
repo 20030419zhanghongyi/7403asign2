@@ -1,0 +1,15 @@
+$ docker compose -p cisc7403-project2 -f docker-compose.yml down --remove-orphans
+ Container cisc7403-project2-nginx-1 Stopping 
+ Container cisc7403-project2-nginx-1 Stopped 
+ Container cisc7403-project2-nginx-1 Removing 
+ Container cisc7403-project2-nginx-1 Removed 
+ Container cisc7403-project2-backend2-1 Stopping 
+ Container cisc7403-project2-backend1-1 Stopping 
+ Container cisc7403-project2-backend2-1 Stopped 
+ Container cisc7403-project2-backend2-1 Removing 
+ Container cisc7403-project2-backend1-1 Stopped 
+ Container cisc7403-project2-backend1-1 Removing 
+ Container cisc7403-project2-backend2-1 Removed 
+ Container cisc7403-project2-backend1-1 Removed 
+ Network cisc7403-project2_app_net Removing 
+ Network cisc7403-project2_app_net Removed 

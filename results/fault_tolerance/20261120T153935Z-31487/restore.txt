@@ -1,0 +1,1 @@
+$ docker compose -p cisc7403-project2 -f docker-compose.yml start backend1 backend2

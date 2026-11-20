@@ -1,0 +1,3 @@
+$ docker compose -p cisc7403-project2 -f docker-compose.yml stop backend1
+ Container cisc7403-project2-backend1-1 Stopping 
+ Container cisc7403-project2-backend1-1 Stopped 

@@ -1,0 +1,19 @@
+{
+  "run_id": "20261120T153935Z-31487",
+  "project": "cisc7403-project2",
+  "passed": true,
+  "experiments": {
+    "balance": {
+      "evidence": "results/load_balancing/20261120T153935Z-31487",
+      "passed": true
+    },
+    "failover": {
+      "evidence": "results/fault_tolerance/20261120T153935Z-31487",
+      "passed": true
+    },
+    "benchmark": {
+      "evidence": "results/performance/20261120T153935Z-31487",
+      "passed": true
+    }
+  }
+}

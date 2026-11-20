@@ -1,0 +1,10 @@
+{"utc": "2026-11-20T15:41:18.594623+00:00", "phase": "preflight", "path": "/", "status": 200, "body": {"instance": "backend1", "status": "ok"}, "content_type": "application/json", "elapsed_ms": 1.074}
+{"utc": "2026-11-20T15:41:18.645976+00:00", "phase": "preflight", "path": "/work", "status": 200, "body": {"instance": "backend1", "status": "ok"}, "content_type": "application/json", "elapsed_ms": 52.635}
+{"utc": "2026-11-20T15:41:18.748792+00:00", "phase": "preflight", "path": "/", "status": 200, "body": {"instance": "backend1", "status": "ok"}, "content_type": "application/json", "elapsed_ms": 2.687}
+{"utc": "2026-11-20T15:41:18.802088+00:00", "phase": "preflight", "path": "/work", "status": 200, "body": {"instance": "backend1", "status": "ok"}, "content_type": "application/json", "elapsed_ms": 53.955}
+{"utc": "2026-11-20T15:41:18.906329+00:00", "phase": "preflight", "path": "/", "status": 200, "body": {"instance": "backend1", "status": "ok"}, "content_type": "application/json", "elapsed_ms": 3.88}
+{"utc": "2026-11-20T15:41:18.960866+00:00", "phase": "preflight", "path": "/work", "status": 200, "body": {"instance": "backend1", "status": "ok"}, "content_type": "application/json", "elapsed_ms": 57.464}
+{"utc": "2026-11-20T15:41:19.068560+00:00", "phase": "preflight", "path": "/", "status": 200, "body": {"instance": "backend1", "status": "ok"}, "content_type": "application/json", "elapsed_ms": 3.371}
+{"utc": "2026-11-20T15:41:19.123108+00:00", "phase": "preflight", "path": "/work", "status": 200, "body": {"instance": "backend1", "status": "ok"}, "content_type": "application/json", "elapsed_ms": 56.093}
+{"utc": "2026-11-20T15:41:19.230284+00:00", "phase": "preflight", "path": "/", "status": 200, "body": {"instance": "backend1", "status": "ok"}, "content_type": "application/json", "elapsed_ms": 7.063}
+{"utc": "2026-11-20T15:41:19.287638+00:00", "phase": "preflight", "path": "/work", "status": 200, "body": {"instance": "backend1", "status": "ok"}, "content_type": "application/json", "elapsed_ms": 56.432}

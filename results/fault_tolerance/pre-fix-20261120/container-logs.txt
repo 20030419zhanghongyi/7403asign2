@@ -1,0 +1,575 @@
+$ docker compose -p cisc7403-review-1120 logs --no-color --timestamps
+nginx-1  | 2026-11-20T15:18:29.096154549Z /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx-1  | 2026-11-20T15:18:29.096274716Z /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx-1  | 2026-11-20T15:18:29.096540841Z /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx-1  | 2026-11-20T15:18:29.098289008Z 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx-1  | 2026-11-20T15:18:29.105553802Z 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx-1  | 2026-11-20T15:18:29.105772094Z /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx-1  | 2026-11-20T15:18:29.106086636Z /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx-1  | 2026-11-20T15:18:29.109429846Z /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx-1  | 2026-11-20T15:18:29.111027929Z /docker-entrypoint.sh: Configuration complete; ready for start up
+nginx-1  | 2026-11-20T15:18:29.321937502Z 172.20.0.1 - - [20/Nov/2026:15:18:29 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:29.413679909Z 172.20.0.1 - - [20/Nov/2026:15:18:29 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:29.517767195Z 172.20.0.1 - - [20/Nov/2026:15:18:29 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:29.571717131Z 172.20.0.1 - - [20/Nov/2026:15:18:29 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:29.674598708Z 172.20.0.1 - - [20/Nov/2026:15:18:29 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:29.726623268Z 172.20.0.1 - - [20/Nov/2026:15:18:29 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:29.830986054Z 172.20.0.1 - - [20/Nov/2026:15:18:29 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:29.884873906Z 172.20.0.1 - - [20/Nov/2026:15:18:29 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:30.008746074Z 172.20.0.1 - - [20/Nov/2026:15:18:30 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:30.060816550Z 172.20.0.1 - - [20/Nov/2026:15:18:30 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:30.165754960Z 172.20.0.1 - - [20/Nov/2026:15:18:30 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:30.218819144Z 172.20.0.1 - - [20/Nov/2026:15:18:30 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:30.324030222Z 172.20.0.1 - - [20/Nov/2026:15:18:30 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:30.380328616Z 172.20.0.1 - - [20/Nov/2026:15:18:30 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:30.487245402Z 172.20.0.1 - - [20/Nov/2026:15:18:30 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:30.544593546Z 172.20.0.1 - - [20/Nov/2026:15:18:30 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:30.652756999Z 172.20.0.1 - - [20/Nov/2026:15:18:30 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:30.708894476Z 172.20.0.1 - - [20/Nov/2026:15:18:30 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:30.812901761Z 172.20.0.1 - - [20/Nov/2026:15:18:30 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:30.866420863Z 172.20.0.1 - - [20/Nov/2026:15:18:30 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:30.970291148Z 172.20.0.1 - - [20/Nov/2026:15:18:30 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:31.024635499Z 172.20.0.1 - - [20/Nov/2026:15:18:31 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:31.131403784Z 172.20.0.1 - - [20/Nov/2026:15:18:31 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:31.187533094Z 172.20.0.1 - - [20/Nov/2026:15:18:31 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:31.297401213Z 172.20.0.1 - - [20/Nov/2026:15:18:31 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:31.353104773Z 172.20.0.1 - - [20/Nov/2026:15:18:31 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:31.459653891Z 172.20.0.1 - - [20/Nov/2026:15:18:31 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:31.516522827Z 172.20.0.1 - - [20/Nov/2026:15:18:31 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:31.624547695Z 172.20.0.1 - - [20/Nov/2026:15:18:31 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:31.681438964Z 172.20.0.1 - - [20/Nov/2026:15:18:31 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:31.786752332Z 172.20.0.1 - - [20/Nov/2026:15:18:31 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:31.839849932Z 172.20.0.1 - - [20/Nov/2026:15:18:31 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:31.942410133Z 172.20.0.1 - - [20/Nov/2026:15:18:31 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:31.998222734Z 172.20.0.1 - - [20/Nov/2026:15:18:31 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:32.104278726Z 172.20.0.1 - - [20/Nov/2026:15:18:32 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:32.161902995Z 172.20.0.1 - - [20/Nov/2026:15:18:32 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:32.268473528Z 172.20.0.1 - - [20/Nov/2026:15:18:32 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:32.322309587Z 172.20.0.1 - - [20/Nov/2026:15:18:32 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:32.431594747Z 172.20.0.1 - - [20/Nov/2026:15:18:32 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:32.485826389Z 172.20.0.1 - - [20/Nov/2026:15:18:32 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:32.592404548Z 172.20.0.1 - - [20/Nov/2026:15:18:32 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:42.860033792Z 172.20.0.1 - - [20/Nov/2026:15:18:42 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:45.920887619Z 172.20.0.1 - - [20/Nov/2026:15:18:45 +0000] "GET /work HTTP/1.1" 499 0 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:45.983111924Z 172.20.0.1 - - [20/Nov/2026:15:18:45 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:49.069059933Z 172.20.0.1 - - [20/Nov/2026:15:18:49 +0000] "GET /work HTTP/1.1" 499 0 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:49.136312029Z 172.20.0.1 - - [20/Nov/2026:15:18:49 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:52.197540297Z 172.20.0.1 - - [20/Nov/2026:15:18:52 +0000] "GET /work HTTP/1.1" 499 0 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:52.260707015Z 172.20.0.1 - - [20/Nov/2026:15:18:52 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:55.356154598Z 172.20.0.1 - - [20/Nov/2026:15:18:55 +0000] "GET /work HTTP/1.1" 499 0 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:55.409271522Z 172.20.0.1 - - [20/Nov/2026:15:18:55 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:58.470716162Z 172.20.0.1 - - [20/Nov/2026:15:18:58 +0000] "GET /work HTTP/1.1" 499 0 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:18:58.526364626Z 172.20.0.1 - - [20/Nov/2026:15:18:58 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:01.581766998Z 172.20.0.1 - - [20/Nov/2026:15:19:01 +0000] "GET /work HTTP/1.1" 499 0 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:01.635455420Z 172.20.0.1 - - [20/Nov/2026:15:19:01 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:04.692410693Z 172.20.0.1 - - [20/Nov/2026:15:19:04 +0000] "GET /work HTTP/1.1" 499 0 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:04.748134406Z 172.20.0.1 - - [20/Nov/2026:15:19:04 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:07.807673459Z 172.20.0.1 - - [20/Nov/2026:15:19:07 +0000] "GET /work HTTP/1.1" 499 0 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:07.860368296Z 172.20.0.1 - - [20/Nov/2026:15:19:07 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:10.918505756Z 172.20.0.1 - - [20/Nov/2026:15:19:10 +0000] "GET /work HTTP/1.1" 499 0 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:10.983332593Z 172.20.0.1 - - [20/Nov/2026:15:19:10 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:14.041115795Z 172.20.0.1 - - [20/Nov/2026:15:19:14 +0000] "GET /work HTTP/1.1" 499 0 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:14.092788838Z 172.20.0.1 - - [20/Nov/2026:15:19:14 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:17.148354578Z 172.20.0.1 - - [20/Nov/2026:15:19:17 +0000] "GET /work HTTP/1.1" 499 0 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:17.203512912Z 172.20.0.1 - - [20/Nov/2026:15:19:17 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:20.259482108Z 172.20.0.1 - - [20/Nov/2026:15:19:20 +0000] "GET /work HTTP/1.1" 499 0 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:20.311956524Z 172.20.0.1 - - [20/Nov/2026:15:19:20 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:23.367510344Z 172.20.0.1 - - [20/Nov/2026:15:19:23 +0000] "GET /work HTTP/1.1" 499 0 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:23.420664135Z 172.20.0.1 - - [20/Nov/2026:15:19:23 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:26.479150791Z 172.20.0.1 - - [20/Nov/2026:15:19:26 +0000] "GET /work HTTP/1.1" 499 0 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:26.535184873Z 172.20.0.1 - - [20/Nov/2026:15:19:26 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:29.631886530Z 172.20.0.1 - - [20/Nov/2026:15:19:29 +0000] "GET /work HTTP/1.1" 499 0 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:29.861407647Z 172.20.0.1 - - [20/Nov/2026:15:19:29 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:30.063776014Z 172.20.0.1 - - [20/Nov/2026:15:19:30 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:30.064712556Z 172.20.0.1 - - [20/Nov/2026:15:19:30 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:30.173398677Z 172.20.0.1 - - [20/Nov/2026:15:19:30 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:30.227267383Z 172.20.0.1 - - [20/Nov/2026:15:19:30 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:30.330160212Z 172.20.0.1 - - [20/Nov/2026:15:19:30 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:30.381537627Z 172.20.0.1 - - [20/Nov/2026:15:19:30 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:30.484124706Z 172.20.0.1 - - [20/Nov/2026:15:19:30 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:30.546069662Z 172.20.0.1 - - [20/Nov/2026:15:19:30 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:30.651171574Z 172.20.0.1 - - [20/Nov/2026:15:19:30 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:30.705650031Z 172.20.0.1 - - [20/Nov/2026:15:19:30 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:30.848013692Z 172.20.0.1 - - [20/Nov/2026:15:19:30 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:30.904505398Z 172.20.0.1 - - [20/Nov/2026:15:19:30 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:31.018507060Z 172.20.0.1 - - [20/Nov/2026:15:19:31 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:31.076713932Z 172.20.0.1 - - [20/Nov/2026:15:19:31 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:31.185170261Z 172.20.0.1 - - [20/Nov/2026:15:19:31 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:31.241192009Z 172.20.0.1 - - [20/Nov/2026:15:19:31 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:31.351878296Z 172.20.0.1 - - [20/Nov/2026:15:19:31 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:31.407368376Z 172.20.0.1 - - [20/Nov/2026:15:19:31 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:31.532198788Z 172.20.0.1 - - [20/Nov/2026:15:19:31 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:31.598875202Z 172.20.0.1 - - [20/Nov/2026:15:19:31 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:31.747306320Z 172.20.0.1 - - [20/Nov/2026:15:19:31 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:45.040089432Z 172.20.0.1 - - [20/Nov/2026:15:19:45 +0000] "GET / HTTP/1.1" 499 0 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:45.181251419Z 172.20.0.1 - - [20/Nov/2026:15:19:45 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:48.265136840Z 172.20.0.1 - - [20/Nov/2026:15:19:48 +0000] "GET / HTTP/1.1" 499 0 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:48.436010031Z 172.20.0.1 - - [20/Nov/2026:15:19:48 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:51.498718926Z 172.20.0.1 - - [20/Nov/2026:15:19:51 +0000] "GET / HTTP/1.1" 499 0 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:51.604827456Z 172.20.0.1 - - [20/Nov/2026:15:19:51 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:54.662093159Z 172.20.0.1 - - [20/Nov/2026:15:19:54 +0000] "GET / HTTP/1.1" 499 0 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:54.767819605Z 172.20.0.1 - - [20/Nov/2026:15:19:54 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:57.897374149Z 172.20.0.1 - - [20/Nov/2026:15:19:57 +0000] "GET / HTTP/1.1" 499 0 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:19:58.002003511Z 172.20.0.1 - - [20/Nov/2026:15:19:58 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1  | 2026-11-20T15:20:01.058167289Z 172.20.0.1 - - [20/Nov/2026:15:20:01 +0000] "GET / HTTP/1.1" 499 0 "-" "Python-urllib/3.12"
+backend1-1  | 2026-11-20T15:18:29.276295737Z {"event": "startup", "instance": "backend1", "work_seconds": 0.05, "processes": 1, "threaded": false}
+backend1-1  | 2026-11-20T15:18:29.276396820Z  * Serving Flask app 'app'
+backend1-1  | 2026-11-20T15:18:29.276400112Z  * Debug mode: off
+backend1-1  | 2026-11-20T15:18:29.281028988Z [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+backend1-1  | 2026-11-20T15:18:29.281038447Z  * Running on all addresses (0.0.0.0)
+backend1-1  | 2026-11-20T15:18:29.281039322Z  * Running on http://127.0.0.1:5000
+backend1-1  | 2026-11-20T15:18:29.281039988Z  * Running on http://172.20.0.3:5000
+backend1-1  | 2026-11-20T15:18:29.281040655Z [33mPress CTRL+C to quit[0m
+backend1-1  | 2026-11-20T15:18:29.321681669Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.04}
+backend1-1  | 2026-11-20T15:18:29.321776502Z 172.20.0.4 - - [20/Nov/2026 15:18:29] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:18:29.517395904Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 51.111}
+backend1-1  | 2026-11-20T15:18:29.517527112Z 172.20.0.4 - - [20/Nov/2026 15:18:29] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:18:29.674210875Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.35}
+backend1-1  | 2026-11-20T15:18:29.674318500Z 172.20.0.4 - - [20/Nov/2026 15:18:29] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:18:29.832581596Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 51.27}
+backend1-1  | 2026-11-20T15:18:29.832601138Z 172.20.0.4 - - [20/Nov/2026 15:18:29] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:18:30.007661657Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.416}
+backend1-1  | 2026-11-20T15:18:30.007772365Z 172.20.0.4 - - [20/Nov/2026 15:18:30] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:18:30.164822626Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.475}
+backend1-1  | 2026-11-20T15:18:30.164975460Z 172.20.0.4 - - [20/Nov/2026 15:18:30] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:18:30.323327971Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.901}
+backend1-1  | 2026-11-20T15:18:30.323601388Z 172.20.0.4 - - [20/Nov/2026 15:18:30] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:18:30.485686859Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.832}
+backend1-1  | 2026-11-20T15:18:30.486076151Z 172.20.0.4 - - [20/Nov/2026 15:18:30] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:18:30.651532582Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.647}
+backend1-1  | 2026-11-20T15:18:30.651771249Z 172.20.0.4 - - [20/Nov/2026 15:18:30] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:18:30.812371803Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.469}
+backend1-1  | 2026-11-20T15:18:30.812763845Z 172.20.0.4 - - [20/Nov/2026 15:18:30] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:18:30.969671606Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 51.073}
+backend1-1  | 2026-11-20T15:18:30.969836814Z 172.20.0.4 - - [20/Nov/2026 15:18:30] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:18:31.129747700Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 51.329}
+backend1-1  | 2026-11-20T15:18:31.130393284Z 172.20.0.4 - - [20/Nov/2026 15:18:31] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:18:31.294318962Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 51.161}
+backend1-1  | 2026-11-20T15:18:31.295194088Z 172.20.0.4 - - [20/Nov/2026 15:18:31] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:18:31.458617349Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.34}
+backend1-1  | 2026-11-20T15:18:31.458840599Z 172.20.0.4 - - [20/Nov/2026 15:18:31] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:18:31.622749361Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 51.429}
+backend1-1  | 2026-11-20T15:18:31.623368153Z 172.20.0.4 - - [20/Nov/2026 15:18:31] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:18:31.785989873Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.504}
+backend1-1  | 2026-11-20T15:18:31.786343832Z 172.20.0.4 - - [20/Nov/2026 15:18:31] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:18:31.941815216Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.417}
+backend1-1  | 2026-11-20T15:18:31.942030091Z 172.20.0.4 - - [20/Nov/2026 15:18:31] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:18:32.103069226Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 51.693}
+backend1-1  | 2026-11-20T15:18:32.103755934Z 172.20.0.4 - - [20/Nov/2026 15:18:32] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:18:32.267011403Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 51.407}
+backend1-1  | 2026-11-20T15:18:32.267192153Z 172.20.0.4 - - [20/Nov/2026 15:18:32] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:18:32.427649204Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 51.219}
+backend1-1  | 2026-11-20T15:18:32.429359955Z 172.20.0.4 - - [20/Nov/2026 15:18:32] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:18:32.591101964Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.456}
+backend1-1  | 2026-11-20T15:18:32.591336381Z 172.20.0.4 - - [20/Nov/2026 15:18:32] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:19:30.054454223Z {"event": "startup", "instance": "backend1", "work_seconds": 0.05, "processes": 1, "threaded": false}
+backend1-1  | 2026-11-20T15:19:30.054467765Z  * Serving Flask app 'app'
+backend1-1  | 2026-11-20T15:19:30.054468931Z  * Debug mode: off
+backend1-1  | 2026-11-20T15:19:30.058743806Z [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+backend1-1  | 2026-11-20T15:19:30.058755931Z  * Running on all addresses (0.0.0.0)
+backend1-1  | 2026-11-20T15:19:30.058757098Z  * Running on http://127.0.0.1:5000
+backend1-1  | 2026-11-20T15:19:30.058757889Z  * Running on http://172.20.0.3:5000
+backend1-1  | 2026-11-20T15:19:30.058758556Z [33mPress CTRL+C to quit[0m
+backend1-1  | 2026-11-20T15:19:30.063550639Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.037}
+backend1-1  | 2026-11-20T15:19:30.063636514Z 172.20.0.4 - - [20/Nov/2026 15:19:30] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:19:30.172819218Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 56.588}
+backend1-1  | 2026-11-20T15:19:30.172901177Z 172.20.0.4 - - [20/Nov/2026 15:19:30] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:19:30.329525670Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.38}
+backend1-1  | 2026-11-20T15:19:30.329607629Z 172.20.0.4 - - [20/Nov/2026 15:19:30] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:19:30.483822789Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 51.003}
+backend1-1  | 2026-11-20T15:19:30.483861123Z 172.20.0.4 - - [20/Nov/2026 15:19:30] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:19:30.650618866Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 51.1}
+backend1-1  | 2026-11-20T15:19:30.650970783Z 172.20.0.4 - - [20/Nov/2026 15:19:30] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:19:30.848051483Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 79.954}
+backend1-1  | 2026-11-20T15:19:30.848065483Z 172.20.0.4 - - [20/Nov/2026 15:19:30] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:19:31.017080018Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 57.011}
+backend1-1  | 2026-11-20T15:19:31.017478643Z 172.20.0.4 - - [20/Nov/2026 15:19:31] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:19:31.183695469Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 51.517}
+backend1-1  | 2026-11-20T15:19:31.183742011Z 172.20.0.4 - - [20/Nov/2026 15:19:31] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:19:31.351134296Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 55.065}
+backend1-1  | 2026-11-20T15:19:31.351390171Z 172.20.0.4 - - [20/Nov/2026 15:19:31] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:19:31.530210205Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.739}
+backend1-1  | 2026-11-20T15:19:31.530637246Z 172.20.0.4 - - [20/Nov/2026 15:19:31] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:19:31.745907154Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 92.217}
+backend1-1  | 2026-11-20T15:19:31.746224945Z 172.20.0.4 - - [20/Nov/2026 15:19:31] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:19:45.179387169Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 52.019}
+backend1-1  | 2026-11-20T15:19:45.180155294Z 172.20.0.4 - - [20/Nov/2026 15:19:45] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:19:48.435428698Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 52.134}
+backend1-1  | 2026-11-20T15:19:48.435499406Z 172.20.0.4 - - [20/Nov/2026 15:19:48] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:19:51.603429040Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 51.678}
+backend1-1  | 2026-11-20T15:19:51.604048790Z 172.20.0.4 - - [20/Nov/2026 15:19:51] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:19:54.766882730Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 51.985}
+backend1-1  | 2026-11-20T15:19:54.767614522Z 172.20.0.4 - - [20/Nov/2026 15:19:54] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:19:58.001130886Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 51.628}
+backend1-1  | 2026-11-20T15:19:58.001468136Z 172.20.0.4 - - [20/Nov/2026 15:19:58] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:01.168060900Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 57.575}
+backend1-1  | 2026-11-20T15:20:01.168135691Z 172.20.0.4 - - [20/Nov/2026 15:20:01] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:04.333176932Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 51.129}
+backend1-1  | 2026-11-20T15:20:04.333621432Z 172.20.0.4 - - [20/Nov/2026 15:20:04] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:07.497471526Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.516}
+backend1-1  | 2026-11-20T15:20:07.497660151Z 172.20.0.4 - - [20/Nov/2026 15:20:07] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:10.675180430Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 51.206}
+backend1-1  | 2026-11-20T15:20:10.675575013Z 172.20.0.4 - - [20/Nov/2026 15:20:10] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:13.839714858Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.519}
+backend1-1  | 2026-11-20T15:20:13.839835649Z 172.20.0.4 - - [20/Nov/2026 15:20:13] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:17.004116642Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.308}
+backend1-1  | 2026-11-20T15:20:17.004291433Z 172.20.0.4 - - [20/Nov/2026 15:20:17] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:20.202999068Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.659}
+backend1-1  | 2026-11-20T15:20:20.203337859Z 172.20.0.4 - - [20/Nov/2026 15:20:20] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:23.364738691Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.623}
+backend1-1  | 2026-11-20T15:20:23.365010608Z 172.20.0.4 - - [20/Nov/2026 15:20:23] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:24.363401183Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.24}
+backend1-1  | 2026-11-20T15:20:24.363581933Z 172.20.0.4 - - [20/Nov/2026 15:20:24] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:24.468730164Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.577}
+backend1-1  | 2026-11-20T15:20:24.469255206Z 172.20.0.4 - - [20/Nov/2026 15:20:24] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:24.526217237Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.165}
+backend1-1  | 2026-11-20T15:20:24.526518487Z 172.20.0.4 - - [20/Nov/2026 15:20:24] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:24.632835135Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.305}
+backend1-1  | 2026-11-20T15:20:24.633051385Z 172.20.0.4 - - [20/Nov/2026 15:20:24] "GET /work HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:24.827716059Z 172.20.0.4 - - [20/Nov/2026 15:20:24] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:24.827741351Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.039}
+backend1-1  | 2026-11-20T15:20:25.029088024Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.033}
+backend1-1  | 2026-11-20T15:20:25.029150399Z 172.20.0.4 - - [20/Nov/2026 15:20:25] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:25.230799071Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.059}
+backend1-1  | 2026-11-20T15:20:25.230838904Z 172.20.0.4 - - [20/Nov/2026 15:20:25] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:25.435217535Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.156}
+backend1-1  | 2026-11-20T15:20:25.436059785Z 172.20.0.4 - - [20/Nov/2026 15:20:25] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:25.640431832Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.131}
+backend1-1  | 2026-11-20T15:20:25.640738373Z 172.20.0.4 - - [20/Nov/2026 15:20:25] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:25.845275587Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.135}
+backend1-1  | 2026-11-20T15:20:25.845534045Z 172.20.0.4 - - [20/Nov/2026 15:20:25] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:26.050309342Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.097}
+backend1-1  | 2026-11-20T15:20:26.050613342Z 172.20.0.4 - - [20/Nov/2026 15:20:26] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:26.259816638Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.183}
+backend1-1  | 2026-11-20T15:20:26.259873971Z 172.20.0.4 - - [20/Nov/2026 15:20:26] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:26.462808268Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.084}
+backend1-1  | 2026-11-20T15:20:26.463065393Z 172.20.0.4 - - [20/Nov/2026 15:20:26] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:26.666852856Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.053}
+backend1-1  | 2026-11-20T15:20:26.666903898Z 172.20.0.4 - - [20/Nov/2026 15:20:26] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:26.870506278Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.11}
+backend1-1  | 2026-11-20T15:20:26.870592903Z 172.20.0.4 - - [20/Nov/2026 15:20:26] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:27.074249450Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.152}
+backend1-1  | 2026-11-20T15:20:27.074546908Z 172.20.0.4 - - [20/Nov/2026 15:20:27] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:27.279848621Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.145}
+backend1-1  | 2026-11-20T15:20:27.280321579Z 172.20.0.4 - - [20/Nov/2026 15:20:27] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:27.485344834Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.173}
+backend1-1  | 2026-11-20T15:20:27.486010292Z 172.20.0.4 - - [20/Nov/2026 15:20:27] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:27.689843047Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.081}
+backend1-1  | 2026-11-20T15:20:27.690125672Z 172.20.0.4 - - [20/Nov/2026 15:20:27] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:27.894228343Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.125}
+backend1-1  | 2026-11-20T15:20:27.894787218Z 172.20.0.4 - - [20/Nov/2026 15:20:27] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:28.098521681Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.058}
+backend1-1  | 2026-11-20T15:20:28.098753806Z 172.20.0.4 - - [20/Nov/2026 15:20:28] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:28.303127685Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.085}
+backend1-1  | 2026-11-20T15:20:28.303206352Z 172.20.0.4 - - [20/Nov/2026 15:20:28] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:28.509342606Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.362}
+backend1-1  | 2026-11-20T15:20:28.509738398Z 172.20.0.4 - - [20/Nov/2026 15:20:28] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:28.715612860Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.1}
+backend1-1  | 2026-11-20T15:20:28.715882027Z 172.20.0.4 - - [20/Nov/2026 15:20:28] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:28.921054197Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.138}
+backend1-1  | 2026-11-20T15:20:28.921183947Z 172.20.0.4 - - [20/Nov/2026 15:20:28] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:29.127205410Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.129}
+backend1-1  | 2026-11-20T15:20:29.127358993Z 172.20.0.4 - - [20/Nov/2026 15:20:29] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:29.331832789Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.107}
+backend1-1  | 2026-11-20T15:20:29.332291789Z 172.20.0.4 - - [20/Nov/2026 15:20:29] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:29.537514501Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.167}
+backend1-1  | 2026-11-20T15:20:29.537596751Z 172.20.0.4 - - [20/Nov/2026 15:20:29] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:29.742346838Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.072}
+backend1-1  | 2026-11-20T15:20:29.742484255Z 172.20.0.4 - - [20/Nov/2026 15:20:29] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:29.948695592Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.096}
+backend1-1  | 2026-11-20T15:20:29.949170508Z 172.20.0.4 - - [20/Nov/2026 15:20:29] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:30.154331929Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.163}
+backend1-1  | 2026-11-20T15:20:30.154432220Z 172.20.0.4 - - [20/Nov/2026 15:20:30] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:30.358821349Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.118}
+backend1-1  | 2026-11-20T15:20:30.358972141Z 172.20.0.4 - - [20/Nov/2026 15:20:30] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:30.564696811Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.141}
+backend1-1  | 2026-11-20T15:20:30.564787311Z 172.20.0.4 - - [20/Nov/2026 15:20:30] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:30.769815940Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.111}
+backend1-1  | 2026-11-20T15:20:30.769901940Z 172.20.0.4 - - [20/Nov/2026 15:20:30] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:30.973726985Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.142}
+backend1-1  | 2026-11-20T15:20:30.973865527Z 172.20.0.4 - - [20/Nov/2026 15:20:30] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:31.179409488Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.188}
+backend1-1  | 2026-11-20T15:20:31.179598363Z 172.20.0.4 - - [20/Nov/2026 15:20:31] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:31.382428742Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.042}
+backend1-1  | 2026-11-20T15:20:31.382495659Z 172.20.0.4 - - [20/Nov/2026 15:20:31] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:31.585622162Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.188}
+backend1-1  | 2026-11-20T15:20:31.585669871Z 172.20.0.4 - - [20/Nov/2026 15:20:31] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:31.791643249Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.164}
+backend1-1  | 2026-11-20T15:20:31.792095749Z 172.20.0.4 - - [20/Nov/2026 15:20:31] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:31.998100710Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.089}
+backend1-1  | 2026-11-20T15:20:31.998621752Z 172.20.0.4 - - [20/Nov/2026 15:20:31] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:32.202797547Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.118}
+backend1-1  | 2026-11-20T15:20:32.203000380Z 172.20.0.4 - - [20/Nov/2026 15:20:32] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:32.407237883Z 172.20.0.4 - - [20/Nov/2026 15:20:32] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:32.407274967Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.126}
+backend1-1  | 2026-11-20T15:20:32.613664511Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.174}
+backend1-1  | 2026-11-20T15:20:32.613738178Z 172.20.0.4 - - [20/Nov/2026 15:20:32] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:32.817896389Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.124}
+backend1-1  | 2026-11-20T15:20:32.818194014Z 172.20.0.4 - - [20/Nov/2026 15:20:32] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:33.023341267Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.185}
+backend1-1  | 2026-11-20T15:20:33.023522892Z 172.20.0.4 - - [20/Nov/2026 15:20:33] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:33.228099353Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.154}
+backend1-1  | 2026-11-20T15:20:33.228732270Z 172.20.0.4 - - [20/Nov/2026 15:20:33] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:33.433157106Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.166}
+backend1-1  | 2026-11-20T15:20:33.433478439Z 172.20.0.4 - - [20/Nov/2026 15:20:33] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:33.638715734Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.174}
+backend1-1  | 2026-11-20T15:20:33.638797609Z 172.20.0.4 - - [20/Nov/2026 15:20:33] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:33.845691486Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.211}
+backend1-1  | 2026-11-20T15:20:33.846078778Z 172.20.0.4 - - [20/Nov/2026 15:20:33] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:34.051323822Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.162}
+backend1-1  | 2026-11-20T15:20:34.051707947Z 172.20.0.4 - - [20/Nov/2026 15:20:34] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:34.259475366Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.196}
+backend1-1  | 2026-11-20T15:20:34.260074074Z 172.20.0.4 - - [20/Nov/2026 15:20:34] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:34.463825035Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.065}
+backend1-1  | 2026-11-20T15:20:34.463858576Z 172.20.0.4 - - [20/Nov/2026 15:20:34] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:34.668156121Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.189}
+backend1-1  | 2026-11-20T15:20:34.668330621Z 172.20.0.4 - - [20/Nov/2026 15:20:34] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:34.873398540Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.217}
+backend1-1  | 2026-11-20T15:20:34.873707581Z 172.20.0.4 - - [20/Nov/2026 15:20:34] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:35.078604459Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.241}
+backend1-1  | 2026-11-20T15:20:35.078647167Z 172.20.0.4 - - [20/Nov/2026 15:20:35] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:35.283786461Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.17}
+backend1-1  | 2026-11-20T15:20:35.284023878Z 172.20.0.4 - - [20/Nov/2026 15:20:35] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:35.498212461Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.101}
+backend1-1  | 2026-11-20T15:20:35.498369503Z 172.20.0.4 - - [20/Nov/2026 15:20:35] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:35.661265555Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.28}
+backend1-1  | 2026-11-20T15:20:35.662065305Z 172.20.0.4 - - [20/Nov/2026 15:20:35] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:35.824297899Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.159}
+backend1-1  | 2026-11-20T15:20:35.825216065Z 172.20.0.4 - - [20/Nov/2026 15:20:35] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:35.987380784Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.185}
+backend1-1  | 2026-11-20T15:20:35.987654200Z 172.20.0.4 - - [20/Nov/2026 15:20:35] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:36.149860294Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.163}
+backend1-1  | 2026-11-20T15:20:36.150048502Z 172.20.0.4 - - [20/Nov/2026 15:20:36] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:36.313851387Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.084}
+backend1-1  | 2026-11-20T15:20:36.314232054Z 172.20.0.4 - - [20/Nov/2026 15:20:36] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:36.474292356Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.06}
+backend1-1  | 2026-11-20T15:20:36.474323856Z 172.20.0.4 - - [20/Nov/2026 15:20:36] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:36.634792992Z 172.20.0.4 - - [20/Nov/2026 15:20:36] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:36.634868617Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.274}
+backend1-1  | 2026-11-20T15:20:36.798604002Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.086}
+backend1-1  | 2026-11-20T15:20:36.798688502Z 172.20.0.4 - - [20/Nov/2026 15:20:36] "GET / HTTP/1.1" 200 -
+backend1-1  | 2026-11-20T15:20:36.959330804Z {"event": "request", "instance": "backend1", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.126}
+backend1-1  | 2026-11-20T15:20:36.959473762Z 172.20.0.4 - - [20/Nov/2026 15:20:36] "GET / HTTP/1.1" 200 -
+nginx-1  | 2026-11-20T15:20:01.168829358Z 172.20.0.1 - - [20/Nov/2026:15:20:01 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:04.225893530Z 172.20.0.1 - - [20/Nov/2026:15:20:04 +0000] "GET / HTTP/1.1" 499 0 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:04.334408974Z 172.20.0.1 - - [20/Nov/2026:15:20:04 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:07.392591791Z 172.20.0.1 - - [20/Nov/2026:15:20:07 +0000] "GET / HTTP/1.1" 499 0 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:07.498212026Z 172.20.0.1 - - [20/Nov/2026:15:20:07 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:10.562354989Z 172.20.0.1 - - [20/Nov/2026:15:20:10 +0000] "GET / HTTP/1.1" 499 0 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:10.676151222Z 172.20.0.1 - - [20/Nov/2026:15:20:10 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:13.735820666Z 172.20.0.1 - - [20/Nov/2026:15:20:13 +0000] "GET / HTTP/1.1" 499 0 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:13.840231649Z 172.20.0.1 - - [20/Nov/2026:15:20:13 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:16.900672867Z 172.20.0.1 - - [20/Nov/2026:15:20:16 +0000] "GET / HTTP/1.1" 499 0 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:17.004660100Z 172.20.0.1 - - [20/Nov/2026:15:20:17 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:20.099037669Z 172.20.0.1 - - [20/Nov/2026:15:20:20 +0000] "GET / HTTP/1.1" 499 0 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:20.204010151Z 172.20.0.1 - - [20/Nov/2026:15:20:20 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:23.260442376Z 172.20.0.1 - - [20/Nov/2026:15:20:23 +0000] "GET / HTTP/1.1" 499 0 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:23.366114941Z 172.20.0.1 - - [20/Nov/2026:15:20:23 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:24.361419766Z 2026/11/20 15:20:24 [error] 30#30: *239 connect() failed (113: Host is unreachable) while connecting to upstream, client: 172.20.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://172.20.0.2:5000/", host: "127.0.0.1:6120"
+nginx-1     | 2026-11-20T15:20:24.364203683Z 172.20.0.1 - - [20/Nov/2026:15:20:24 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:24.470113539Z 172.20.0.1 - - [20/Nov/2026:15:20:24 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:24.527900320Z 172.20.0.1 - - [20/Nov/2026:15:20:24 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:24.633646260Z 172.20.0.1 - - [20/Nov/2026:15:20:24 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:24.827734934Z 172.20.0.1 - - [20/Nov/2026:15:20:24 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:25.029435190Z 172.20.0.1 - - [20/Nov/2026:15:20:25 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:25.231091904Z 172.20.0.1 - - [20/Nov/2026:15:20:25 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:25.436280451Z 172.20.0.1 - - [20/Nov/2026:15:20:25 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:25.641781331Z 172.20.0.1 - - [20/Nov/2026:15:20:25 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:25.846022378Z 172.20.0.1 - - [20/Nov/2026:15:20:25 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:26.050736967Z 172.20.0.1 - - [20/Nov/2026:15:20:26 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:26.260334804Z 172.20.0.1 - - [20/Nov/2026:15:20:26 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:26.463253393Z 172.20.0.1 - - [20/Nov/2026:15:20:26 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:26.667508773Z 172.20.0.1 - - [20/Nov/2026:15:20:26 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:26.870891403Z 172.20.0.1 - - [20/Nov/2026:15:20:26 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:27.075230158Z 172.20.0.1 - - [20/Nov/2026:15:20:27 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:27.280475412Z 172.20.0.1 - - [20/Nov/2026:15:20:27 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:27.486466500Z 172.20.0.1 - - [20/Nov/2026:15:20:27 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:27.690357588Z 172.20.0.1 - - [20/Nov/2026:15:20:27 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:27.895281010Z 172.20.0.1 - - [20/Nov/2026:15:20:27 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:28.099080014Z 172.20.0.1 - - [20/Nov/2026:15:20:28 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:28.303624060Z 172.20.0.1 - - [20/Nov/2026:15:20:28 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:28.510499356Z 172.20.0.1 - - [20/Nov/2026:15:20:28 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:28.716508776Z 172.20.0.1 - - [20/Nov/2026:15:20:28 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:28.921914364Z 172.20.0.1 - - [20/Nov/2026:15:20:28 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:29.127725076Z 172.20.0.1 - - [20/Nov/2026:15:20:29 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:29.332692705Z 172.20.0.1 - - [20/Nov/2026:15:20:29 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:29.539077584Z 172.20.0.1 - - [20/Nov/2026:15:20:29 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:29.742653505Z 172.20.0.1 - - [20/Nov/2026:15:20:29 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:29.949290258Z 172.20.0.1 - - [20/Nov/2026:15:20:29 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:30.155432929Z 172.20.0.1 - - [20/Nov/2026:15:20:30 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:30.359391182Z 172.20.0.1 - - [20/Nov/2026:15:20:30 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:30.565478227Z 172.20.0.1 - - [20/Nov/2026:15:20:30 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:30.770393023Z 172.20.0.1 - - [20/Nov/2026:15:20:30 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:30.974172360Z 172.20.0.1 - - [20/Nov/2026:15:20:30 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:31.180459738Z 172.20.0.1 - - [20/Nov/2026:15:20:31 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:31.382649575Z 172.20.0.1 - - [20/Nov/2026:15:20:31 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:31.586073704Z 172.20.0.1 - - [20/Nov/2026:15:20:31 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:31.793008957Z 172.20.0.1 - - [20/Nov/2026:15:20:31 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:31.998665585Z 172.20.0.1 - - [20/Nov/2026:15:20:31 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:32.204146130Z 172.20.0.1 - - [20/Nov/2026:15:20:32 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:32.407776008Z 172.20.0.1 - - [20/Nov/2026:15:20:32 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:32.614291469Z 172.20.0.1 - - [20/Nov/2026:15:20:32 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:32.818616222Z 172.20.0.1 - - [20/Nov/2026:15:20:32 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:33.024074559Z 172.20.0.1 - - [20/Nov/2026:15:20:33 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:33.230111853Z 172.20.0.1 - - [20/Nov/2026:15:20:33 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:33.433909773Z 172.20.0.1 - - [20/Nov/2026:15:20:33 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:33.639571567Z 172.20.0.1 - - [20/Nov/2026:15:20:33 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:33.846861486Z 172.20.0.1 - - [20/Nov/2026:15:20:33 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:34.052499155Z 172.20.0.1 - - [20/Nov/2026:15:20:34 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:34.260460782Z 172.20.0.1 - - [20/Nov/2026:15:20:34 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:34.464257368Z 172.20.0.1 - - [20/Nov/2026:15:20:34 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:34.668698954Z 172.20.0.1 - - [20/Nov/2026:15:20:34 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:34.874410998Z 172.20.0.1 - - [20/Nov/2026:15:20:34 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:35.079356250Z 172.20.0.1 - - [20/Nov/2026:15:20:35 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:35.285183544Z 172.20.0.1 - - [20/Nov/2026:15:20:35 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:35.494477504Z 172.20.0.1 - - [20/Nov/2026:15:20:35 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:35.498797420Z 172.20.0.1 - - [20/Nov/2026:15:20:35 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+backend2-1  | 2026-11-20T15:18:29.222251801Z {"event": "startup", "instance": "backend2", "work_seconds": 0.05, "processes": 1, "threaded": false}
+nginx-1     | 2026-11-20T15:20:35.607140857Z 172.20.0.1 - - [20/Nov/2026:15:20:35 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:35.662364513Z 172.20.0.1 - - [20/Nov/2026:15:20:35 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+backend2-1  | 2026-11-20T15:18:29.222326843Z  * Serving Flask app 'app'
+backend2-1  | 2026-11-20T15:18:29.222328635Z  * Debug mode: off
+backend2-1  | 2026-11-20T15:18:29.227105261Z [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+backend2-1  | 2026-11-20T15:18:29.227237803Z  * Running on all addresses (0.0.0.0)
+backend2-1  | 2026-11-20T15:18:29.227239761Z  * Running on http://127.0.0.1:5000
+backend2-1  | 2026-11-20T15:18:29.227240428Z  * Running on http://172.20.0.2:5000
+backend2-1  | 2026-11-20T15:18:29.227241053Z [33mPress CTRL+C to quit[0m
+backend2-1  | 2026-11-20T15:18:29.413433909Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.046}
+backend2-1  | 2026-11-20T15:18:29.413546784Z 172.20.0.4 - - [20/Nov/2026 15:18:29] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:18:29.571298797Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.09}
+backend2-1  | 2026-11-20T15:18:29.571422256Z 172.20.0.4 - - [20/Nov/2026 15:18:29] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:18:29.726271809Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.055}
+backend2-1  | 2026-11-20T15:18:29.726467601Z 172.20.0.4 - - [20/Nov/2026 15:18:29] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:18:29.884614281Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.069}
+backend2-1  | 2026-11-20T15:18:29.884733198Z 172.20.0.4 - - [20/Nov/2026 15:18:29] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:18:30.060573133Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.063}
+backend2-1  | 2026-11-20T15:18:30.060692175Z 172.20.0.4 - - [20/Nov/2026 15:18:30] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:18:30.218440853Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.067}
+backend2-1  | 2026-11-20T15:18:30.218535894Z 172.20.0.4 - - [20/Nov/2026 15:18:30] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:18:30.379082115Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.153}
+backend2-1  | 2026-11-20T15:18:30.379818074Z 172.20.0.4 - - [20/Nov/2026 15:18:30] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:18:30.543758462Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.201}
+backend2-1  | 2026-11-20T15:18:30.544168671Z 172.20.0.4 - - [20/Nov/2026 15:18:30] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:18:30.707889476Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.22}
+backend2-1  | 2026-11-20T15:18:30.708088976Z 172.20.0.4 - - [20/Nov/2026 15:18:30] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:18:30.866140904Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.055}
+backend2-1  | 2026-11-20T15:18:30.866136488Z 172.20.0.4 - - [20/Nov/2026 15:18:30] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:18:31.023530332Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.112}
+backend2-1  | 2026-11-20T15:18:31.023754290Z 172.20.0.4 - - [20/Nov/2026 15:18:31] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:18:31.186161302Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.165}
+backend2-1  | 2026-11-20T15:18:31.186460719Z 172.20.0.4 - - [20/Nov/2026 15:18:31] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:18:31.352207981Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.171}
+backend2-1  | 2026-11-20T15:18:31.352787940Z 172.20.0.4 - - [20/Nov/2026 15:18:31] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:18:31.515849701Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.27}
+backend2-1  | 2026-11-20T15:18:31.516095701Z 172.20.0.4 - - [20/Nov/2026 15:18:31] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:18:31.680998964Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.167}
+backend2-1  | 2026-11-20T15:18:31.681064380Z 172.20.0.4 - - [20/Nov/2026 15:18:31] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:18:31.838866265Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.069}
+backend2-1  | 2026-11-20T15:18:31.839886807Z 172.20.0.4 - - [20/Nov/2026 15:18:31] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:18:31.997363192Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.179}
+backend2-1  | 2026-11-20T15:18:31.997546942Z 172.20.0.4 - - [20/Nov/2026 15:18:31] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:18:32.160599036Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.313}
+backend2-1  | 2026-11-20T15:18:32.160759119Z 172.20.0.4 - - [20/Nov/2026 15:18:32] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:18:32.321710212Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.088}
+backend2-1  | 2026-11-20T15:18:32.322231295Z 172.20.0.4 - - [20/Nov/2026 15:18:32] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:18:32.485098722Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.13}
+backend2-1  | 2026-11-20T15:18:32.485478889Z 172.20.0.4 - - [20/Nov/2026 15:18:32] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:18:42.859841333Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.045}
+backend2-1  | 2026-11-20T15:18:42.860022333Z 172.20.0.4 - - [20/Nov/2026 15:18:42] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:18:45.981741965Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.153}
+backend2-1  | 2026-11-20T15:18:45.982218841Z 172.20.0.4 - - [20/Nov/2026 15:18:45] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:18:49.135359862Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.167}
+backend2-1  | 2026-11-20T15:18:49.135415695Z 172.20.0.4 - - [20/Nov/2026 15:18:49] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:18:52.259295057Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.152}
+backend2-1  | 2026-11-20T15:18:52.259438265Z 172.20.0.4 - - [20/Nov/2026 15:18:52] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:18:55.408759647Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.075}
+backend2-1  | 2026-11-20T15:18:55.408850022Z 172.20.0.4 - - [20/Nov/2026 15:18:55] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:18:58.525498001Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.207}
+backend2-1  | 2026-11-20T15:18:58.525582085Z 172.20.0.4 - - [20/Nov/2026 15:18:58] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:19:01.635165086Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.075}
+backend2-1  | 2026-11-20T15:19:01.635220586Z 172.20.0.4 - - [20/Nov/2026 15:19:01] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:19:04.747074781Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.185}
+backend2-1  | 2026-11-20T15:19:04.747593781Z 172.20.0.4 - - [20/Nov/2026 15:19:04] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:19:07.859989921Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.112}
+backend2-1  | 2026-11-20T15:19:07.860155754Z 172.20.0.4 - - [20/Nov/2026 15:19:07] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:19:10.982186468Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.174}
+backend2-1  | 2026-11-20T15:19:10.982291551Z 172.20.0.4 - - [20/Nov/2026 15:19:10] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:19:14.092500213Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.061}
+backend2-1  | 2026-11-20T15:19:14.092611547Z 172.20.0.4 - - [20/Nov/2026 15:19:14] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:19:17.202239412Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.133}
+backend2-1  | 2026-11-20T15:19:17.202311746Z 172.20.0.4 - - [20/Nov/2026 15:19:17] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:19:20.311314899Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.094}
+backend2-1  | 2026-11-20T15:19:20.311365691Z 172.20.0.4 - - [20/Nov/2026 15:19:20] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:19:23.420259261Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.143}
+backend2-1  | 2026-11-20T15:19:23.420296594Z 172.20.0.4 - - [20/Nov/2026 15:19:23] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:19:26.534218664Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.214}
+backend2-1  | 2026-11-20T15:19:26.534591206Z 172.20.0.4 - - [20/Nov/2026 15:19:26] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:19:29.861032605Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.062}
+backend2-1  | 2026-11-20T15:19:29.861099563Z 172.20.0.4 - - [20/Nov/2026 15:19:29] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:19:30.064526139Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.03}
+backend2-1  | 2026-11-20T15:19:30.064562139Z 172.20.0.4 - - [20/Nov/2026 15:19:30] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:19:30.226899883Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.061}
+nginx-1     | 2026-11-20T15:20:35.769632451Z 172.20.0.1 - - [20/Nov/2026:15:20:35 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:35.826184773Z 172.20.0.1 - - [20/Nov/2026:15:20:35 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:35.931876003Z 172.20.0.1 - - [20/Nov/2026:15:20:35 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:35.989218367Z 172.20.0.1 - - [20/Nov/2026:15:20:35 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:36.095364305Z 172.20.0.1 - - [20/Nov/2026:15:20:36 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:36.150768794Z 172.20.0.1 - - [20/Nov/2026:15:20:36 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:36.257282482Z 172.20.0.1 - - [20/Nov/2026:15:20:36 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:36.314577304Z 172.20.0.1 - - [20/Nov/2026:15:20:36 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:36.421401116Z 172.20.0.1 - - [20/Nov/2026:15:20:36 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:36.474570648Z 172.20.0.1 - - [20/Nov/2026:15:20:36 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:36.579253752Z 172.20.0.1 - - [20/Nov/2026:15:20:36 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:36.635706950Z 172.20.0.1 - - [20/Nov/2026:15:20:36 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:36.743043596Z 172.20.0.1 - - [20/Nov/2026:15:20:36 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:36.799735960Z 172.20.0.1 - - [20/Nov/2026:15:20:36 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:36.905700939Z 172.20.0.1 - - [20/Nov/2026:15:20:36 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:36.959859095Z 172.20.0.1 - - [20/Nov/2026:15:20:36 +0000] "GET / HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+nginx-1     | 2026-11-20T15:20:37.066084991Z 172.20.0.1 - - [20/Nov/2026:15:20:37 +0000] "GET /work HTTP/1.1" 200 38 "-" "Python-urllib/3.12"
+backend2-1  | 2026-11-20T15:19:30.227035424Z 172.20.0.4 - - [20/Nov/2026 15:19:30] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:19:30.381179543Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.043}
+backend2-1  | 2026-11-20T15:19:30.381262793Z 172.20.0.4 - - [20/Nov/2026 15:19:30] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:19:30.545744954Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.101}
+backend2-1  | 2026-11-20T15:19:30.545770037Z 172.20.0.4 - - [20/Nov/2026 15:19:30] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:19:30.704885822Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.101}
+backend2-1  | 2026-11-20T15:19:30.705040822Z 172.20.0.4 - - [20/Nov/2026 15:19:30] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:19:30.903405023Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.109}
+backend2-1  | 2026-11-20T15:19:30.903813273Z 172.20.0.4 - - [20/Nov/2026 15:19:30] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:19:31.075868724Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.133}
+backend2-1  | 2026-11-20T15:19:31.076231099Z 172.20.0.4 - - [20/Nov/2026 15:19:31] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:19:31.239889259Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.179}
+backend2-1  | 2026-11-20T15:19:31.240074050Z 172.20.0.4 - - [20/Nov/2026 15:19:31] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:19:31.405822418Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.151}
+backend2-1  | 2026-11-20T15:19:31.406084918Z 172.20.0.4 - - [20/Nov/2026 15:19:31] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:19:31.588216035Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.121}
+backend2-1  | 2026-11-20T15:19:31.588834369Z 172.20.0.4 - - [20/Nov/2026 15:19:31] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:20:25.023069316Z {"event": "startup", "instance": "backend2", "work_seconds": 0.05, "processes": 1, "threaded": false}
+backend2-1  | 2026-11-20T15:20:25.023091608Z  * Serving Flask app 'app'
+backend2-1  | 2026-11-20T15:20:25.023092775Z  * Debug mode: off
+backend2-1  | 2026-11-20T15:20:25.027190649Z [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+backend2-1  | 2026-11-20T15:20:25.027195232Z  * Running on all addresses (0.0.0.0)
+backend2-1  | 2026-11-20T15:20:25.027195982Z  * Running on http://127.0.0.1:5000
+backend2-1  | 2026-11-20T15:20:25.027196524Z  * Running on http://172.20.0.2:5000
+backend2-1  | 2026-11-20T15:20:25.027197066Z [33mPress CTRL+C to quit[0m
+backend2-1  | 2026-11-20T15:20:35.493066962Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/", "status": 200, "elapsed_ms": 0.288}
+backend2-1  | 2026-11-20T15:20:35.493814754Z 172.20.0.4 - - [20/Nov/2026 15:20:35] "GET / HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:20:35.605417524Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 51.446}
+backend2-1  | 2026-11-20T15:20:35.605878107Z 172.20.0.4 - - [20/Nov/2026 15:20:35] "GET /work HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:20:35.768827701Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 51.52}
+backend2-1  | 2026-11-20T15:20:35.769108409Z 172.20.0.4 - - [20/Nov/2026 15:20:35] "GET /work HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:20:35.931012086Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.434}
+backend2-1  | 2026-11-20T15:20:35.931289295Z 172.20.0.4 - - [20/Nov/2026 15:20:35] "GET /work HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:20:36.094261013Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 51.453}
+backend2-1  | 2026-11-20T15:20:36.094533388Z 172.20.0.4 - - [20/Nov/2026 15:20:36] "GET /work HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:20:36.255853565Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 51.309}
+backend2-1  | 2026-11-20T15:20:36.256352357Z 172.20.0.4 - - [20/Nov/2026 15:20:36] "GET /work HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:20:36.421019908Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.435}
+backend2-1  | 2026-11-20T15:20:36.421050075Z 172.20.0.4 - - [20/Nov/2026 15:20:36] "GET /work HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:20:36.577687003Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.599}
+backend2-1  | 2026-11-20T15:20:36.578262878Z 172.20.0.4 - - [20/Nov/2026 15:20:36] "GET /work HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:20:36.741897138Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.864}
+backend2-1  | 2026-11-20T15:20:36.742214429Z 172.20.0.4 - - [20/Nov/2026 15:20:36] "GET /work HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:20:36.904352981Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 51.408}
+backend2-1  | 2026-11-20T15:20:36.904652273Z 172.20.0.4 - - [20/Nov/2026 15:20:36] "GET /work HTTP/1.1" 200 -
+backend2-1  | 2026-11-20T15:20:37.065074325Z {"event": "request", "instance": "backend2", "method": "GET", "path": "/work", "status": 200, "elapsed_ms": 50.97}
+backend2-1  | 2026-11-20T15:20:37.065328783Z 172.20.0.4 - - [20/Nov/2026 15:20:37] "GET /work HTTP/1.1" 200 -
