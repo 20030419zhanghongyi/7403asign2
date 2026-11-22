@@ -31,7 +31,7 @@ curl http://localhost:6120/work
 docker compose logs --tail=30
 ```
 
-Source: backend/, nginx/, docker-compose.yml and docker-compose.single.yml. Full commands: README.md and docs/integration_runbook.md.
+Run these commands from the source directory in the submitted package.
 
 ## 5 Performance experiment
 
@@ -42,7 +42,7 @@ wrk -t2 -c20 -d10s --timeout 5s --latency \
     http://127.0.0.1:6120/work
 ```
 
-Single-backend trials ran only backend1 and nginx, and the upstream contained only backend1. Before each measurement, the script checked running services, upstream entries, image IDs, process and thread counts, and port bindings.
+Single-backend trials used docker-compose.single.yml and nginx/nginx.single.conf, running only backend1 and nginx. To switch configurations, first run docker compose down --remove-orphans. Start one backend with docker compose -f docker-compose.single.yml up --build -d, or two backends with docker compose up --build -d. Use the same wrk command for both configurations.
 
 | Configuration | Throughput (req/s) | Average Latency (ms) |
 | --- | --- | --- |
@@ -53,7 +53,7 @@ The table reports the arithmetic mean of three trials for each configuration. La
 
 Across trials 1-3, throughput was 18.81, 18.84 and 18.82 req/s with one backend, and 37.52, 37.41 and 37.67 req/s with two. The corresponding average latencies were 1010.00, 1010.00 and 1010.00 ms with one backend, and 515.99, 519.63 and 516.02 ms with two.
 
-The original single-backend output reports latency as 1.01 s. All six trials reported zero socket errors (including timeouts) and no non-2xx/3xx responses. Raw outputs: results/performance/20261120T153935Z-31487/<trial-mode>/wrk.txt.
+The original single-backend output reports latency as 1.01 s. All six trials reported zero socket errors (including timeouts) and no non-2xx/3xx responses.
 
 ## Discussion and limitations
 
@@ -64,5 +64,3 @@ The result applies to this 50 ms waiting workload and these short trials. Longer
 ## 6 Member contributions
 
 The overall workload was shared approximately equally: ZHANG HONGYI 50%; HAN YAN 50%. Zhang handled the backend and Dockerfile, environment setup, backend tests, integration fixes, experiment scripts, performance analysis and final report. Han handled the Nginx load balancer, Docker Compose deployment, service networking and integration instructions.
-
-Reproduce all experiments with bash scripts/run_all.sh. The final source matches the SHA-256 manifest in results/acceptance/20261120T153935Z-31487/source-sha256.json. Full evidence index: results/README.md.

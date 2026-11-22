@@ -18,7 +18,7 @@ curl http://localhost:6120/work
 docker compose logs --tail=30
 ```
 
-Source: backend/, nginx/, docker-compose.yml and docker-compose.single.yml. Full commands: README.md and docs/integration_runbook.md.
+Run these commands from the source directory in the submitted package.
 
 ## 3 Load balancing verification
 
@@ -51,11 +51,13 @@ The first integrated configuration had no explicit upstream connection timeout. 
 
 Setting proxy_connect_timeout 1s limits the wait for an upstream connection. Nginx can then retry the request on the remaining backend before the client times out. The configuration permits retries on connection errors and timeouts, with at most two upstream attempts. The repeated tests shown above had no failed requests.
 
-## Test commands and records
+## Reproducing the checks
 
 ```text
-bash scripts/check_balance.sh
-bash scripts/check_failover.sh
+curl http://localhost:6120/
+docker compose stop backend1
+curl --max-time 3 http://localhost:6120/
+docker compose start backend1
 ```
 
-Run ID: 20261120T153935Z-31487. Summaries, requests.jsonl, active Nginx configurations and container logs are in results/load_balancing/<run ID>/ and results/fault_tolerance/<run ID>/. The latter also includes stop/start records. Tests before the timeout correction are in results/fault_tolerance/pre-fix-20261120/.
+Repeat requests to observe both instance IDs. Repeat the stop/start sequence for backend2. After each restart, allow Nginx to resume sending requests to both backends.
