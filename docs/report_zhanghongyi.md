@@ -63,6 +63,6 @@ The result applies to this 50 ms waiting workload and these short trials. Longer
 
 ## 6 Member contributions
 
-ZHANG HONGYI: backend and Dockerfile; environment setup and backend tests; integration fixes, experiment scripts, performance analysis and final report. HAN YAN: initial Nginx load balancer, Docker Compose deployment and integration instructions.
+The overall workload was shared approximately equally: ZHANG HONGYI 50%; HAN YAN 50%. Zhang handled the backend and Dockerfile, environment setup, backend tests, integration fixes, experiment scripts, performance analysis and final report. Han handled the Nginx load balancer, Docker Compose deployment, service networking and integration instructions.
 
 Reproduce all experiments with bash scripts/run_all.sh. The final source matches the SHA-256 manifest in results/acceptance/20261120T153935Z-31487/source-sha256.json. Full evidence index: results/README.md.
