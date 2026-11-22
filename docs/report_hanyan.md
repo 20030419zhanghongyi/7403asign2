@@ -1,6 +1,6 @@
-# HAN YAN 集成与容错章节
+# 集成与容错章节
 
-以下整理最终系统的集成与容错部分。HAN YAN 的原始提交完成初始 Nginx、Compose 与运行说明；后续补全与实验由 ZHANG HONGYI 分支统一整理，实际贡献以最终报告为准。
+摘自[项目报告](../report/Project_II_Group_2.pdf)。成员贡献见报告第 6 节。
 
 ## 2 Deployment and networking
 
@@ -22,18 +22,18 @@ Source: backend/, nginx/, docker-compose.yml and docker-compose.single.yml. Full
 
 ## 3 Load balancing verification
 
-The final acceptance run sent 40 sequential requests, alternating between / and /work, through port 6120. All returned HTTP 200 and valid JSON. backend1 handled 20 requests and backend2 handled 20. The requirement is that both instances receive requests; strict alternation is not assumed by the check.
+The load-balancing test sent 40 sequential requests through port 6120, alternating between / and /work. All returned HTTP 200 and valid JSON. Each backend handled 20 requests. The test checks that both instances respond; it does not require the response sequence to alternate strictly.
 
 ```text
 {"instance":"backend1","status":"ok"}
 {"instance":"backend2","status":"ok"}
 ```
 
-These response bodies are reproduced from the recorded successful requests. The request file includes timestamps, paths, HTTP status, instance, content type and elapsed time; backend container logs provide corresponding request evidence.
+The examples above come from the request log. Each entry records the timestamp, path, HTTP status, responding instance, content type and elapsed time. Container logs record the requests handled by each backend.
 
 ## 4 Backend failure and recovery
 
-With both upstream entries retained, the experiment stopped backend1, sent 30 requests, restarted it and verified that both instances served requests again. It repeated the same procedure for backend2. The diagnostic client used a 3-second timeout; this is our acceptance threshold, not a time limit specified by the assignment.
+The failure test kept both servers in the Nginx upstream, stopped backend1 and sent 30 requests. After restarting backend1, it checked that both instances served requests again. The same procedure was then repeated for backend2. The test client used a 3-second timeout.
 
 | State | Responses | Instance distribution | Failures |
 | --- | --- | --- | --- |
@@ -43,19 +43,19 @@ With both upstream entries retained, the experiment stopped backend1, sent 30 re
 | backend2 stopped | 30 / 30 | backend1 30 | 0 |
 | backend2 restored | 20 / 20 | backend1 10; backend2 10 | 0 |
 
-The maximum response times while backend1 and backend2 were stopped were 1055.97 ms and 1006.32 ms respectively. Thus availability was preserved in these samples, but failover was not instantaneous. Recovery polling also succeeded without failed requests; after the passive failure window, the restarted instances rejoined request handling.
+With backend1 stopped, the slowest response took 1055.97 ms; with backend2 stopped, it took 1006.32 ms. All sampled requests succeeded, although switching to the remaining backend could add about one second. Recovery polling also completed without failed requests. Both instances handled requests again after each restart.
 
 ## Challenge and correction
 
-Before the correction, the merged configuration had no explicit connection timeout. In the same VM, stopping backend1 produced 15 client timeouts in 30 attempts, and stopping backend2 produced 13 in 30, using the same 3-second diagnostic limit. These were client timeouts, not observed HTTP 504 responses. Nginx logs showed aborted requests and an unreachable stopped upstream.
+The first integrated configuration had no explicit upstream connection timeout. On the same VM and with the same 3-second client limit, stopping backend1 caused 15 of 30 requests to time out; stopping backend2 caused 13 of 30 to time out. The client received no HTTP response for these requests. Nginx logs recorded aborted requests and an unreachable upstream.
 
-Adding proxy_connect_timeout 1s lets connection failure be detected within the client threshold, after which Nginx can try the surviving backend. The final configuration explicitly allows error/timeout retries and at most two upstream attempts [1]. No automatic container restart or high-availability Nginx was added, as neither is required.
+Setting proxy_connect_timeout 1s limits the wait for an upstream connection. Nginx can then retry the request on the remaining backend before the client times out. The configuration permits retries on connection errors and timeouts, with at most two upstream attempts [1]. The repeated tests shown above had no failed requests.
 
-## Evidence and reproduction
+## Test commands and records
 
 ```text
 bash scripts/check_balance.sh
 bash scripts/check_failover.sh
 ```
 
-Final run ID: 20261120T153935Z-31487. See results/load_balancing/<run ID>/ and results/fault_tolerance/<run ID>/ for summaries, requests.jsonl, effective Nginx configuration, stop/start records and container logs. Earlier failure evidence is retained in results/fault_tolerance/pre-fix-20261120/.
+Run ID: 20261120T153935Z-31487. Summaries, requests.jsonl, active Nginx configurations and container logs are in results/load_balancing/<run ID>/ and results/fault_tolerance/<run ID>/. The latter also includes stop/start records. Tests before the timeout correction are in results/fault_tolerance/pre-fix-20261120/.

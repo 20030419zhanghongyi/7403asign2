@@ -37,7 +37,7 @@ bash scripts/run_all.sh
 - 请求诊断的客户端超时为 3 秒，属于本项目验收阈值，不是老师指定时限。Nginx 上游连接超时为 1 秒，并允许连接错误或超时时尝试另一节点。
 - 性能：单、双后端交替进行 3 组试验。每轮预热 3 秒、等待 2 秒排空预热请求，再使用完全相同的 `wrk -t2 -c20 -d10s --timeout 5s --latency http://127.0.0.1:6120/work` 测量。报告列出每轮和三轮算术平均值，检查连接错误、超时及非成功响应。
 
-证据分别在 `results/load_balancing/`、`results/fault_tolerance/`、`results/performance/`，每次执行创建唯一时间戳目录。`results/acceptance/` 同时记录环境、源码 SHA-256 和总体验收结果。失败时保留原始输出并尝试恢复双后端，不把失败改记为通过。
+记录分别在 `results/load_balancing/`、`results/fault_tolerance/`、`results/performance/`，每次执行创建独立的时间戳目录。`results/acceptance/` 同时记录环境、源码 SHA-256 和测试汇总。测试失败时保留原始输出，并尝试恢复双后端。
 
 ## 正确的单后端性能模式
 

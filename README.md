@@ -2,7 +2,7 @@
 
 Scalable Web Service with Load Balancing, Horizontal Scaling and Fault Tolerance.
 
-成员：ZHANG HONGYI（`zhanghongyi`）、HAN YAN（`hanyan`）。后端、Nginx、Compose、自动实验和报告均在本仓库。完整实测结果及源码对应关系见 [实验索引](results/README.md)，教师要求逐项对应见 [提交验收表](docs/requirements_checklist.md)。
+成员：ZHANG HONGYI、HAN YAN。本项目使用 Nginx 分发请求，比较单后端与双后端的吞吐量、平均延迟和故障恢复情况。运行方式如下，实验数据见[实验记录](results/README.md)，报告见 [Project_II_Group_2.pdf](report/Project_II_Group_2.pdf)。
 
 ## 一键启动
 
@@ -43,7 +43,7 @@ bash scripts/run_all.sh         # 负载均衡、故障恢复、性能实验
 
 也可单独运行 `check_balance.sh`、`check_failover.sh`、`benchmark.sh`。实验会重建本项目容器，结束后双后端继续运行；共用虚拟机时请勿并行修改容器或运行其他压测。每轮保存环境、配置、源码校验值、全部请求及原始 wrk 输出，失败记录也会保留。
 
-性能实验固定使用 2 个 wrk 线程、20 条连接、10 秒测量、5 秒超时，每种模式重复 3 次。报告包含吞吐量和平均延迟，不预设加速比。
+性能实验使用 2 个 wrk 线程、20 条连接、10 秒测量、5 秒超时，每种模式重复 3 次，记录吞吐量和平均延迟。
 
 ## 单后端与双后端
 
@@ -63,11 +63,11 @@ bash scripts/set_mode.sh dual
 | `docker-compose.single.yml` | 独立单后端性能配置 |
 | `nginx/` | 双后端与单后端代理配置 |
 | `scripts/` | 后端验收、模式切换与三个实验 |
-| `results/` | 原始证据、环境和源码校验值 |
-| `report/` | 不超过 3 页的英文最终报告及 Markdown 源稿 |
-| `docs/` | 双方分工、交接、实验说明与要求验收表 |
+| `results/` | 请求记录、容器日志、性能数据、环境和源码校验值 |
+| `report/` | 3 页英文报告及 Markdown 源稿 |
+| `docs/` | 运行说明与课程要求对应表 |
 
-两份原始分工文档保留计划安排；最终报告的贡献说明区分后端实现、初始集成和后续补全。个人声明表按教师模板分别填写互评，随本地提交材料提供。
+成员贡献列于报告第 6 节。个人分工声明随提交包提供。
 
 ## 停止服务
 
@@ -77,4 +77,4 @@ docker compose down --remove-orphans
 
 ## 提交材料
 
-提交报告、完整源代码、Dockerfile、Nginx 配置和 Compose 文件，并附课程要求的分工声明。报告里的数字可追溯到 `results/`，复现说明以本 README 和集成运行说明为准。不要将后端开发服务器或本项目当作生产系统部署。
+提交材料包含报告、源代码、Dockerfile、Nginx 配置、Compose 文件及分工声明。报告数据对应 `results/` 中的实验记录；详细操作步骤见[集成运行说明](docs/integration_runbook.md)，课程要求对应关系见[对照表](docs/requirements_checklist.md)。

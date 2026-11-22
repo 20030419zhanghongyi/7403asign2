@@ -1,6 +1,6 @@
-# ZHANG HONGYI 后端与性能章节
+# 后端与性能章节
 
-以下为最终报告中的后端实现和性能部分，完整三页报告见 report/Project_II_Group_2.pdf。
+摘自[项目报告](../report/Project_II_Group_2.pdf)。成员贡献见报告第 6 节。
 
 ## 1 System architecture and backend
 
@@ -35,14 +35,14 @@ Source: backend/, nginx/, docker-compose.yml and docker-compose.single.yml. Full
 
 ## 5 Performance experiment
 
-Measurements ran on Ubuntu 24.04 (aarch64, 4 vCPUs, 7.7 GiB RAM), Docker 29.8.2, Compose 5.6.0 and wrk 4.1.0. Each mode used the same client and /work endpoint. Three paired trials alternated one backend and two backends. Each trial used a 3-second warm-up and a 2-second drain period before the 10-second measurement. Only the timed output enters the table.
+The test VM ran Ubuntu 24.04 on aarch64 with 4 vCPUs and 7.7 GiB RAM. Software versions were Docker 29.8.2, Compose 5.6.0 and wrk 4.1.0. Three pairs of trials alternated between one and two backends, using the same wrk client and /work endpoint. Each trial warmed up for 3 seconds, waited 2 seconds for pending requests to finish, then measured for 10 seconds.
 
 ```text
 wrk -t2 -c20 -d10s --timeout 5s --latency \
     http://127.0.0.1:6120/work
 ```
 
-The single-backend configuration ran only backend1 and nginx, with only backend1 in the upstream. It did not leave a stopped server in the upstream. Each trial checked active services, upstream entries, image IDs, process/thread counts and port bindings before timing.
+Single-backend trials ran only backend1 and nginx, and the upstream contained only backend1. Before each measurement, the script checked running services, upstream entries, image IDs, process and thread counts, and port bindings.
 
 | Trial | 1 backend req/s | 1 backend latency ms | 2 backends req/s | 2 backends latency ms |
 | --- | --- | --- | --- | --- |
@@ -51,17 +51,17 @@ The single-backend configuration ran only backend1 and nginx, with only backend1
 | 3 | 18.82 | 1010.00 | 37.67 | 516.02 |
 | Mean | 18.82 | 1010.00 | 37.53 | 517.21 |
 
-Latency is wrk's reported average, converted to milliseconds. Means are arithmetic averages of the three displayed trial measurements; the original single-backend output has 1.01 s precision. All six trials reported zero socket errors (including timeouts) and no non-2xx/3xx responses. Raw outputs: results/performance/20261120T153935Z-31487/<trial-mode>/wrk.txt.
+Latency is wrk's reported average, converted to milliseconds. Means are arithmetic averages of the three displayed trial measurements; the original single-backend output reports latency as 1.01 s. All six trials reported zero socket errors (including timeouts) and no non-2xx/3xx responses. Raw outputs: results/performance/20261120T153935Z-31487/<trial-mode>/wrk.txt.
 
 ## Discussion and limitations
 
 Throughput rose from 18.82 to 37.53 requests/s (1.99x); average latency fell from 1010.00 to 517.21 ms. A serial 50 ms handler has an ideal capacity near 20 requests/s, or 40 for two independent replicas. The measured rates are slightly lower because of application, connection and scheduling overhead. With 20 concurrent connections, requests queue behind the serial handler, explaining latency well above 50 ms. Adding a backend reduces queueing and almost doubles capacity.
 
-These short trials demonstrate horizontal scaling for an artificial waiting workload. They do not establish long-term reliability or production capacity. Nginx remains a single point of failure; passive failover can add about one second. The VM also hosted other course containers, and wrk ran on the same VM. Image IDs and environment details are recorded for interpretation and reproduction.
+The result applies to this 50 ms waiting workload and these short trials. Longer tests and different workloads would be needed to assess production capacity. Nginx remains a single point of failure, and passive failover can add about one second. Other course containers were running on the VM, which also hosted wrk, so shared resources may have affected the measurements.
 
 ## 6 Member contributions
 
-ZHANG HONGYI: backend, Dockerfile, environment and backend self-tests; subsequent integration corrections, repeatable experiments, performance analysis and consolidated report. HAN YAN: initial Nginx load balancer, Docker Compose deployment and integration runbook. The initial plan divided responsibilities approximately equally; these statements describe delivered components rather than claiming exact measured hours.
+ZHANG HONGYI: backend and Dockerfile; environment setup and backend tests; integration fixes, experiment scripts, performance analysis and final report. HAN YAN: initial Nginx load balancer, Docker Compose deployment and integration instructions.
 
 Reproduce all experiments with bash scripts/run_all.sh. The final source matches the SHA-256 manifest in results/acceptance/20261120T153935Z-31487/source-sha256.json. Full evidence index: results/README.md.
 

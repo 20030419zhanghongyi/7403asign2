@@ -1,7 +1,7 @@
 # 最终报告
 
-[Project_II_Group_2.pdf](Project_II_Group_2.pdf) 是用于提交的 3 页英文报告，无额外封面，满足正文不超过 3 页的要求；[Markdown 源稿](Project_II_Group_2.md) 便于修改和讨论。
+[Project_II_Group_2.pdf](Project_II_Group_2.pdf) 为 3 页英文报告，[Markdown 源稿](Project_II_Group_2.md) 提供可编辑文字。
 
-报告包括系统架构、Compose/Nginx 部署、负载均衡、两个方向的故障与恢复、三组单/双后端 wrk 数据、讨论和实际贡献。所有结果可追溯到 [实验索引](../results/README.md)。
+报告包括系统架构、Compose/Nginx 部署、负载均衡、故障恢复、单/双后端性能比较及成员贡献。原始数据见[实验记录](../results/README.md)。
 
-个人分工声明按老师的原始 Word 模板分别准备，包含个人学号，保存在本地提交材料目录，未加入公共仓库。两人组各填写对方，评价表总分为 100；这与工作量约各 50% 的计划不同。提交前各自核对本人表中的身份与评价内容。
+两份个人分工声明随提交包提供，按课程模板填写，不在公共仓库存放。

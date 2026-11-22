@@ -1,3 +1,9 @@
 *.pdf binary
 *.docx binary
 *.png binary
+
+# Development notes are kept in Git but omitted from submission archives.
+docs/backend_handoff.md export-ignore
+docs/*_工作范围与交接说明.md export-ignore
+docs/report_zhanghongyi.md export-ignore
+docs/report_hanyan.md export-ignore
