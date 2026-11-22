@@ -89,14 +89,16 @@ wrk -t2 -c20 -d10s --timeout 5s --latency \
 
 Single-backend trials ran only backend1 and nginx, and the upstream contained only backend1. Before each measurement, the script checked running services, upstream entries, image IDs, process and thread counts, and port bindings.
 
-| Trial | 1 backend req/s | 1 backend latency ms | 2 backends req/s | 2 backends latency ms |
-| --- | --- | --- | --- | --- |
-| 1 | 18.81 | 1010.00 | 37.52 | 515.99 |
-| 2 | 18.84 | 1010.00 | 37.41 | 519.63 |
-| 3 | 18.82 | 1010.00 | 37.67 | 516.02 |
-| Mean | 18.82 | 1010.00 | 37.53 | 517.21 |
+| Configuration | Throughput (req/s) | Average Latency (ms) |
+| --- | --- | --- |
+| 1 backend | 18.82 | 1010.00 |
+| 2 backends | 37.53 | 517.21 |
 
-Latency is wrk's reported average, converted to milliseconds. Means are arithmetic averages of the three displayed trial measurements; the original single-backend output reports latency as 1.01 s. All six trials reported zero socket errors (including timeouts) and no non-2xx/3xx responses. Raw outputs: results/performance/20261120T153935Z-31487/<trial-mode>/wrk.txt.
+The table reports the arithmetic mean of three trials for each configuration. Latency is wrk's average request latency, converted to milliseconds.
+
+Across trials 1-3, throughput was 18.81, 18.84 and 18.82 req/s with one backend, and 37.52, 37.41 and 37.67 req/s with two. The corresponding average latencies were 1010.00, 1010.00 and 1010.00 ms with one backend, and 515.99, 519.63 and 516.02 ms with two.
+
+The original single-backend output reports latency as 1.01 s. All six trials reported zero socket errors (including timeouts) and no non-2xx/3xx responses. Raw outputs: results/performance/20261120T153935Z-31487/<trial-mode>/wrk.txt.
 
 ## Discussion and limitations
 
