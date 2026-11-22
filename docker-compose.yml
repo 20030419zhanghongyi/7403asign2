@@ -1,3 +1,4 @@
+name: cisc7403-project2
 services:
   backend1:
     build:

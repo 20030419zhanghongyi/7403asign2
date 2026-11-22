@@ -1,0 +1,446 @@
+[
+  {
+    "utc": "2026-11-20T15:42:51.690333+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 1.299
+  },
+  {
+    "utc": "2026-11-20T15:42:51.891793+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 1.323
+  },
+  {
+    "utc": "2026-11-20T15:42:52.093276+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 0.841
+  },
+  {
+    "utc": "2026-11-20T15:42:52.295238+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 2.054
+  },
+  {
+    "utc": "2026-11-20T15:42:52.497503+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 3.2
+  },
+  {
+    "utc": "2026-11-20T15:42:52.701062+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 3.979
+  },
+  {
+    "utc": "2026-11-20T15:42:52.905388+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 3.387
+  },
+  {
+    "utc": "2026-11-20T15:42:53.109237+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 2.91
+  },
+  {
+    "utc": "2026-11-20T15:42:53.313286+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 2.83
+  },
+  {
+    "utc": "2026-11-20T15:42:53.516740+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 3.469
+  },
+  {
+    "utc": "2026-11-20T15:42:53.720481+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 3.586
+  },
+  {
+    "utc": "2026-11-20T15:42:53.924364+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 4.013
+  },
+  {
+    "utc": "2026-11-20T15:42:54.128546+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 1.862
+  },
+  {
+    "utc": "2026-11-20T15:42:54.330538+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 1.092
+  },
+  {
+    "utc": "2026-11-20T15:42:54.531783+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 1.054
+  },
+  {
+    "utc": "2026-11-20T15:42:54.734084+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 2.904
+  },
+  {
+    "utc": "2026-11-20T15:42:54.937329+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 3.251
+  },
+  {
+    "utc": "2026-11-20T15:42:55.141171+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 4.529
+  },
+  {
+    "utc": "2026-11-20T15:42:55.346880+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 2.26
+  },
+  {
+    "utc": "2026-11-20T15:42:55.549397+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 3.21
+  },
+  {
+    "utc": "2026-11-20T15:42:55.753466+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 3.18
+  },
+  {
+    "utc": "2026-11-20T15:42:55.957025+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 4.584
+  },
+  {
+    "utc": "2026-11-20T15:42:56.161840+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 1.342
+  },
+  {
+    "utc": "2026-11-20T15:42:56.363409+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 3.124
+  },
+  {
+    "utc": "2026-11-20T15:42:56.566781+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 3.297
+  },
+  {
+    "utc": "2026-11-20T15:42:56.770300+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 3.738
+  },
+  {
+    "utc": "2026-11-20T15:42:56.974410+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 3.39
+  },
+  {
+    "utc": "2026-11-20T15:42:57.178220+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 3.349
+  },
+  {
+    "utc": "2026-11-20T15:42:57.382031+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 2.338
+  },
+  {
+    "utc": "2026-11-20T15:42:57.585158+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 3.161
+  },
+  {
+    "utc": "2026-11-20T15:42:57.788687+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 2.834
+  },
+  {
+    "utc": "2026-11-20T15:42:57.992063+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 3.204
+  },
+  {
+    "utc": "2026-11-20T15:42:58.195482+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 2.195
+  },
+  {
+    "utc": "2026-11-20T15:42:58.397977+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 2.287
+  },
+  {
+    "utc": "2026-11-20T15:42:58.601403+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 2.438
+  },
+  {
+    "utc": "2026-11-20T15:42:58.804231+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 2.77
+  },
+  {
+    "utc": "2026-11-20T15:42:59.007209+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 2.579
+  },
+  {
+    "utc": "2026-11-20T15:42:59.210328+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 2.497
+  },
+  {
+    "utc": "2026-11-20T15:42:59.413163+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 2.911
+  },
+  {
+    "utc": "2026-11-20T15:42:59.617318+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 3.267
+  },
+  {
+    "utc": "2026-11-20T15:42:59.820952+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 2.129
+  },
+  {
+    "utc": "2026-11-20T15:43:00.024204+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 2.617
+  },
+  {
+    "utc": "2026-11-20T15:43:00.227129+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 1.645
+  },
+  {
+    "utc": "2026-11-20T15:43:00.429036+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 2.714
+  },
+  {
+    "utc": "2026-11-20T15:43:00.632116+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 2.848
+  },
+  {
+    "utc": "2026-11-20T15:43:00.836004+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 3.167
+  },
+  {
+    "utc": "2026-11-20T15:43:01.039476+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 3.984
+  },
+  {
+    "utc": "2026-11-20T15:43:01.244002+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 1.921
+  },
+  {
+    "utc": "2026-11-20T15:43:01.446730+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 3.696
+  },
+  {
+    "utc": "2026-11-20T15:43:01.650677+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 2.116
+  },
+  {
+    "utc": "2026-11-20T15:43:01.853063+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 502,
+    "error": "HTTP Error 502: Bad Gateway",
+    "elapsed_ms": 2.694
+  },
+  {
+    "utc": "2026-11-20T15:43:02.056815+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend2",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 6.685
+  },
+  {
+    "utc": "2026-11-20T15:43:02.263782+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend2",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 5.347
+  },
+  {
+    "utc": "2026-11-20T15:43:02.469997+00:00",
+    "phase": "readiness",
+    "path": "/",
+    "status": 200,
+    "body": {
+      "instance": "backend1",
+      "status": "ok"
+    },
+    "content_type": "application/json",
+    "elapsed_ms": 3.52
+  }
+]

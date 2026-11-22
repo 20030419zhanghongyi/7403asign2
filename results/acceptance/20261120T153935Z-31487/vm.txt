@@ -1,0 +1,2 @@
+$ uname -srmo
+Linux 7.0.0-31-generic aarch64 GNU/Linux

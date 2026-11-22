@@ -1,0 +1,85 @@
+{
+  "commit": "cbdce3e286081a4b92782f641b61f10bea465e91",
+  "checks": {
+    "backend1-private-port": {
+      "passed": true,
+      "bindings": {}
+    },
+    "backend2-private-port": {
+      "passed": true,
+      "bindings": {}
+    },
+    "same-image": {
+      "passed": true,
+      "images": [
+        "sha256:f461b0f0519d6b4ea509e68d84e89e073387bf6b1a385eb19865c0e97181d5c2",
+        "sha256:f461b0f0519d6b4ea509e68d84e89e073387bf6b1a385eb19865c0e97181d5c2"
+      ]
+    },
+    "both-initial": {
+      "passed": true,
+      "requests": 40,
+      "instances": {
+        "backend2": 20,
+        "backend1": 20
+      },
+      "errors": 0
+    },
+    "backend1-stopped": {
+      "passed": false,
+      "requests": 30,
+      "instances": {
+        "backend2": 15,
+        "ERROR": 15
+      },
+      "errors": 15
+    },
+    "recover-backend1": {
+      "passed": true,
+      "requests": 2,
+      "instances_seen": [
+        "backend1",
+        "backend2"
+      ],
+      "errors": 0
+    },
+    "both-after-backend1": {
+      "passed": true,
+      "requests": 20,
+      "instances": {
+        "backend2": 10,
+        "backend1": 10
+      },
+      "errors": 0
+    },
+    "backend2-stopped": {
+      "passed": false,
+      "requests": 30,
+      "instances": {
+        "ERROR": 13,
+        "backend1": 17
+      },
+      "errors": 13
+    },
+    "recover-backend2": {
+      "passed": true,
+      "requests": 53,
+      "instances_seen": [
+        "backend1",
+        "backend2"
+      ],
+      "errors": 0
+    },
+    "both-after-backend2": {
+      "passed": true,
+      "requests": 20,
+      "instances": {
+        "backend1": 10,
+        "backend2": 10
+      },
+      "errors": 0
+    }
+  },
+  "passed": false,
+  "note": "Correctness review, not the formal single-vs-dual backend performance benchmark."
+}

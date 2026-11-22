@@ -1,8 +1,6 @@
 # 后端服务
 
-负责人：zhanghongyi。工作分支：`zhanghongyi`。
-
-已完成 `app.py`、`requirements.txt`、`Dockerfile` 和 `.dockerignore`，并在课程虚拟机实测通过。完整接入步骤见 [后端交接说明](../docs/backend_handoff.md)。
+后端使用 Flask，代码和镜像构建文件均位于本目录。Compose 的连接方式见[集成运行说明](../docs/integration_runbook.md)。
 
 ## 实现约定
 
@@ -14,7 +12,7 @@
 - 请求日志写入标准输出或标准错误，能够通过 `docker logs` 查看。
 - 两个后端使用同一个镜像，差异通过环境变量注入。
 
-## 首次交接
+## 构建与测试
 
 从仓库根目录构建并运行自测：
 
@@ -27,8 +25,6 @@ bash scripts/check_backend.sh
 
 镜像以 UID 10001 运行，基础镜像固定摘要，Python 直接和间接依赖固定版本。启动命令为 `python app.py`，无需在 Compose 覆盖。
 
-`EXPOSE 5000` 仅声明容器端口；Compose 中后端不应配置 `ports`。hanyan 将它们接入同一网络，通过 `backend1:5000`、`backend2:5000` 访问。
+`EXPOSE 5000` 仅声明容器端口。两个后端在 Compose 中没有宿主机端口映射，Nginx 通过同一网络内的 `backend1:5000`、`backend2:5000` 访问它们。
 
 按课程实验使用 Flask 开发服务器，保留单进程串行处理。不要改成默认多线程的 `flask run` 或增加 worker，否则会改变实验条件。[Flask 运行参数说明](https://flask.palletsprojects.com/en/stable/api/#flask.Flask.run)
-
-完整范围见 [zhanghongyi 分工文档](../docs/zhanghongyi_工作范围与交接说明.md)。

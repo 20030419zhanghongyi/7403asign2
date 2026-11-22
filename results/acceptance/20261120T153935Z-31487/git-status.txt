@@ -1,0 +1,12 @@
+$ git status --short
+ M docker-compose.yml
+ M nginx/nginx.conf
+?? docker-compose.single.yml
+?? nginx/nginx.single.conf
+?? results/acceptance/
+?? scripts/benchmark.sh
+?? scripts/check_balance.sh
+?? scripts/check_failover.sh
+?? scripts/experiments.py
+?? scripts/run_all.sh
+?? scripts/set_mode.sh

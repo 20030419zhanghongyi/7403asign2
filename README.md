@@ -1,128 +1,80 @@
-# CISC 7403 Project II
+# CISC 7403 Project II — Group 2
 
 Scalable Web Service with Load Balancing, Horizontal Scaling and Fault Tolerance.
 
-当前进度：`zhanghongyi` 分支已完成后端、Dockerfile、自动自测和真实虚拟机验收，Docker / Compose / wrk 已就绪。hanyan 可按 [后端交接说明](docs/backend_handoff.md) 接入 Nginx 与 Compose；完整系统接通后开展正式实验。
+成员：ZHANG HONGYI、HAN YAN。本项目使用 Nginx 分发请求，比较单后端与双后端的吞吐量、平均延迟和故障恢复情况。运行方式如下，实验数据见[实验记录](results/README.md)，报告见 [Project_II_Group_2.pdf](report/Project_II_Group_2.pdf)。
 
-后端构建和验收（在 Linux 虚拟机的仓库根目录执行）：
+## 一键启动
 
-```bash
-docker build -t cisc7403-backend:v1 ./backend
-bash scripts/check_backend.sh
-```
-
-实测源码提交：`7fb6a188d1f55c33c4bde987cb13a6d6d3023a50`；[验收证据索引](results/backend/README.md) 记录具体输出及源码校验值。
-
-## 分工与分支
-
-| 成员 | 工作分支 | 主要职责 | 详细说明 |
-| --- | --- | --- | --- |
-| zhanghongyi | `zhanghongyi` | 后端、应用镜像、基础环境、性能实验、README | [工作范围与交接说明](docs/zhanghongyi_工作范围与交接说明.md) |
-| hanyan | `hanyan` | Nginx、Compose、负载均衡与容错实验、报告排版 | [工作范围与交接说明](docs/hanyan_工作范围与交接说明.md) |
-
-总体按预计工作量各承担约 50%，报告各写约一半。`main` 汇总双方核对通过的成果。
-
-## 目标系统架构
-
-```mermaid
-flowchart TD
-    client[用户或 wrk] -->|宿主机端口 6120| nginx[Nginx 容器 内部端口 80]
-    nginx -->|Compose 内部网络| backend1[backend1 端口 5000]
-    nginx -->|Compose 内部网络| backend2[backend2 端口 5000]
-```
-
-- 两个后端使用同一个镜像 `cisc7403-backend:v1`。
-- 后端监听 `0.0.0.0:5000`，通过 `INSTANCE_NAME` 区分实例。
-- `GET /` 返回实例信息；`GET /work` 等待约 50 ms 后返回。
-- 两个接口均返回 JSON，至少包含 `instance` 和 `status`。
-- 每个后端仅一个服务进程，关闭请求多线程；使用 Flask 时设置 `threaded=False`、`debug=False`、`use_reloader=False`。
-- 仅 Nginx 映射 `6120:80`；后端不发布宿主机端口。
-
-6120 端口及并发限制来自作业要求；5000 内部端口、镜像名、实例变量与 JSON 字段是小组交接约定。
-
-## 当前目录
-
-```text
-.
-├── README.md
-├── .gitignore
-├── .editorconfig
-├── backend/
-│   ├── README.md
-│   ├── app.py
-│   ├── requirements.txt
-│   ├── Dockerfile
-│   └── .dockerignore
-├── nginx/
-│   └── README.md
-├── scripts/
-│   ├── README.md
-│   ├── check_backend.sh
-│   └── backend_http_test.py
-├── docs/
-│   ├── README.md
-│   ├── backend_handoff.md
-│   ├── zhanghongyi_工作范围与交接说明.md
-│   └── hanyan_工作范围与交接说明.md
-├── results/
-│   ├── README.md
-│   ├── backend/
-│   ├── load_balancing/
-│   ├── fault_tolerance/
-│   └── performance/
-└── report/
-    └── README.md
-```
-
-`results/backend/` 已保存真实自测输出；其余实验目录目前用 `.gitkeep` 保留。
-
-后续主要文件：
-
-| 负责人 | 需要补齐的文件 |
-| --- | --- |
-| zhanghongyi | 系统集成后完成 `scripts/benchmark.sh`、`docs/report_zhanghongyi.md` 和正式性能实验 |
-| hanyan | `nginx/nginx.conf`、根目录 `docker-compose.yml`、`docs/integration_runbook.md`、`scripts/check_balance.sh`、`scripts/check_failover.sh`、`docs/report_hanyan.md` |
-| 双方 | `report/` 中最终报告与成员分工声明；README 最终运行步骤 |
-
-## 开发与交接顺序
-
-1. zhanghongyi 在同名分支完成后端、镜像、环境说明和自测，推送后提供提交 SHA 与 `docs/backend_handoff.md`。
-2. hanyan 在同名分支接入该提交，完成 Nginx 和 Compose，提供可运行系统及单后端、双后端切换说明。
-3. zhanghongyi 合并集成提交后运行性能实验；hanyan 完成负载均衡及容错实验。共用虚拟机时错开测试时段。
-4. 双方各写约一半报告，核对原始证据后合并成果到 `main`，共同完成最终验收。
-
-首次后端成果在 `zhanghongyi` 分支。hanyan 从该分支的交接提交建立自己的分支，或将它合并到已有 `hanyan` 分支；具体命令见 [交接说明](docs/backend_handoff.md)。
-
-## 运行与实验入口
-
-后端已可独立构建和自测。以下是 hanyan 完成 Nginx / Compose 集成后需要支持的完整系统入口，当前尚未交付 `docker-compose.yml`。
-
-在课程虚拟机准备 Docker、Docker Compose 和 `wrk`，完整系统应支持：
+在课程 Ubuntu 虚拟机准备 Docker Engine、Compose v2、Python 3、curl；性能实验另需 wrk。确认宿主机端口 6120 可用，然后在仓库根目录运行：
 
 ```bash
 docker compose up --build
 ```
 
-系统接通后的基本检查与性能负载示例：
+后台运行加 `-d`。默认项目名 `cisc7403-project2`，默认部署恰好三个容器：Nginx、backend1、backend2。
 
 ```bash
 curl http://localhost:6120/
 curl http://localhost:6120/work
-wrk -t2 -c20 -d10s http://localhost:6120/work
+docker compose ps
+docker compose logs --tail=30
 ```
 
-需要完成并保留证据的实验：
+响应示例：`{"instance":"backend1","status":"ok"}`。具体实例由 Nginx 分配，不要求严格交替。
 
-- 负载均衡：证明两个实例都处理了请求。
-- 容错：双后端配置下停止一个后端，验证剩余实例继续响应，再恢复被停止的后端。
-- 性能：使用相同负载比较单后端与双后端，记录吞吐量和平均延迟。单后端性能模式与故障实验分别记录配置。
+## 架构
 
-## 最终提交检查
+```mermaid
+flowchart TD
+    client[Client or wrk] -->|6120 mapped to 80| nginx[Nginx load balancer]
+    nginx -->|backend1:5000| b1[backend1]
+    nginx -->|backend2:5000| b2[backend2]
+```
 
-- 报告正文不超过 3 页，封面如有另计。
-- 提交完整源代码、后端 Dockerfile、Nginx 配置和 `docker-compose.yml`。
-- 报告包含架构说明、部署方法、三个实验的证据与结果、讨论和成员贡献。
-- 整理小组分工声明表，由双方核对实际贡献。
-- 在课程虚拟机从仓库内容复现启动与实验。
+两个后端在同一 Compose 网络中运行同一镜像 `cisc7403-backend:v1`，不发布宿主机端口。实例名通过 `INSTANCE_NAME` 注入。`/work` 使用 `time.sleep(0.05)`；每个后端仅一个 Python 服务进程，关闭请求多线程、debug 与自动重载。Nginx 连接上游超时为 1 秒，发生连接错误或超时时可尝试另一后端。
 
-作业依据为课程提供的 Project II PDF 和 Role Declaration Page，原始教学文件由小组保管。
+## 运行实验
+
+```bash
+bash scripts/check_backend.sh   # 独立后端自测
+bash scripts/run_all.sh         # 负载均衡、故障恢复、性能实验
+```
+
+也可单独运行 `check_balance.sh`、`check_failover.sh`、`benchmark.sh`。实验会重建本项目容器，结束后双后端继续运行；共用虚拟机时请勿并行修改容器或运行其他压测。每轮保存环境、配置、源码校验值、全部请求及原始 wrk 输出，失败记录也会保留。
+
+性能实验使用 2 个 wrk 线程、20 条连接、10 秒测量、5 秒超时，每种模式重复 3 次，记录吞吐量和平均延迟。
+
+## 单后端与双后端
+
+```bash
+bash scripts/set_mode.sh single
+bash scripts/set_mode.sh dual
+```
+
+单后端使用独立 `docker-compose.single.yml`，实际只运行一个后端，且 upstream 只有它。故障实验保留双 upstream 后停止容器。两种实验不能混用。完整检查、恢复和手动命令见 [集成运行说明](docs/integration_runbook.md)。
+
+## 文件导航
+
+| 路径 | 内容 |
+| --- | --- |
+| `backend/` | Flask 应用、锁定的依赖、Dockerfile 与构建上下文 |
+| `docker-compose.yml` | 默认三个容器，课程要求的一键启动入口 |
+| `docker-compose.single.yml` | 独立单后端性能配置 |
+| `nginx/` | 双后端与单后端代理配置 |
+| `scripts/` | 后端验收、模式切换与三个实验 |
+| `results/` | 请求记录、容器日志、性能数据、环境和源码校验值 |
+| `report/` | 3 页英文报告及 Markdown 源稿 |
+| `docs/` | 运行说明与课程要求对应表 |
+
+成员贡献列于报告第 6 节。个人分工声明随提交包提供。
+
+## 停止服务
+
+```bash
+docker compose down --remove-orphans
+```
+
+## 提交材料
+
+提交材料包含报告、源代码、Dockerfile、Nginx 配置、Compose 文件及分工声明。报告数据对应 `results/` 中的实验记录；详细操作步骤见[集成运行说明](docs/integration_runbook.md)，课程要求对应关系见[对照表](docs/requirements_checklist.md)。

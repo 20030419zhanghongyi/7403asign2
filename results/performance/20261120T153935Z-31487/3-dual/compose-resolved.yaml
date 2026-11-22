@@ -1,0 +1,47 @@
+$ docker compose -p cisc7403-project2 -f docker-compose.yml config
+name: cisc7403-project2
+services:
+  backend1:
+    environment:
+      INSTANCE_NAME: backend1
+    image: cisc7403-backend:v1
+    networks:
+      app_net: null
+    build:
+      context: /home/hongyizhang/7403-complete-20261120/backend
+      dockerfile: Dockerfile
+  backend2:
+    environment:
+      INSTANCE_NAME: backend2
+    image: cisc7403-backend:v1
+    networks:
+      app_net: null
+    build:
+      context: /home/hongyizhang/7403-complete-20261120/backend
+      dockerfile: Dockerfile
+  nginx:
+    image: nginx:alpine
+    networks:
+      app_net: null
+    volumes:
+      - type: bind
+        source: /home/hongyizhang/7403-complete-20261120/nginx/nginx.conf
+        target: /etc/nginx/nginx.conf
+        read_only: true
+        bind: {}
+    depends_on:
+      backend1:
+        condition: service_started
+        required: true
+      backend2:
+        condition: service_started
+        required: true
+    ports:
+      - mode: ingress
+        target: 80
+        published: "6120"
+        protocol: tcp
+networks:
+  app_net:
+    name: cisc7403-project2_app_net
+    driver: bridge

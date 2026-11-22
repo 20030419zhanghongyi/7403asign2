@@ -1,0 +1,27 @@
+$ docker compose -p cisc7403-project2 -f docker-compose.single.yml exec -T nginx nginx -T
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+# configuration file /etc/nginx/nginx.conf:
+events {
+    worker_connections 1024;
+}
+
+http {
+    upstream backend_pool {
+        server backend1:5000;
+    }
+
+    server {
+        listen 80;
+        location / {
+            proxy_pass http://backend_pool;
+            proxy_connect_timeout 1s;
+            proxy_next_upstream error timeout;
+            proxy_next_upstream_tries 2;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        }
+    }
+}
+
+nginx: configuration file /etc/nginx/nginx.conf test is successful

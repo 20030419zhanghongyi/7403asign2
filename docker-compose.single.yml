@@ -1,0 +1,24 @@
+# Standalone single-backend performance configuration (not an override).
+name: cisc7403-project2
+services:
+  backend1:
+    build:
+      context: ./backend
+    image: cisc7403-backend:v1
+    environment:
+      - INSTANCE_NAME=backend1
+    networks:
+      - app_net
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "6120:80"
+    volumes:
+      - ./nginx/nginx.single.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - backend1
+    networks:
+      - app_net
+networks:
+  app_net:
+    driver: bridge

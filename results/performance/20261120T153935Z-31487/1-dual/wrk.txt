@@ -1,0 +1,14 @@
+$ wrk -t2 -c20 -d10s --timeout 5s --latency http://127.0.0.1:6120/work
+Running 10s test @ http://127.0.0.1:6120/work
+  2 threads and 20 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   515.99ms   63.91ms 593.40ms   94.71%
+    Req/Sec    18.83      6.84    30.00     53.27%
+  Latency Distribution
+     50%  527.81ms
+     75%  532.07ms
+     90%  534.02ms
+     99%  591.86ms
+  378 requests in 10.08s, 70.88KB read
+Requests/sec:     37.52
+Transfer/sec:      7.03KB
