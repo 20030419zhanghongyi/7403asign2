@@ -64,6 +64,3 @@ The result applies to this 50 ms waiting workload and these short trials. Longer
 ZHANG HONGYI: backend and Dockerfile; environment setup and backend tests; integration fixes, experiment scripts, performance analysis and final report. HAN YAN: initial Nginx load balancer, Docker Compose deployment and integration instructions.
 
 Reproduce all experiments with bash scripts/run_all.sh. The final source matches the SHA-256 manifest in results/acceptance/20261120T153935Z-31487/source-sha256.json. Full evidence index: results/README.md.
-
-[1] Nginx proxy module: nginx.org/en/docs/http/ngx_http_proxy_module.html
-[2] Course Project II specification, Sections 3.1-3.6.

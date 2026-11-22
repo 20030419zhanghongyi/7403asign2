@@ -67,7 +67,7 @@ With backend1 stopped, the slowest response took 1055.97 ms; with backend2 stopp
 
 The first integrated configuration had no explicit upstream connection timeout. On the same VM and with the same 3-second client limit, stopping backend1 caused 15 of 30 requests to time out; stopping backend2 caused 13 of 30 to time out. The client received no HTTP response for these requests. Nginx logs recorded aborted requests and an unreachable upstream.
 
-Setting proxy_connect_timeout 1s limits the wait for an upstream connection. Nginx can then retry the request on the remaining backend before the client times out. The configuration permits retries on connection errors and timeouts, with at most two upstream attempts [1]. The repeated tests shown above had no failed requests.
+Setting proxy_connect_timeout 1s limits the wait for an upstream connection. Nginx can then retry the request on the remaining backend before the client times out. The configuration permits retries on connection errors and timeouts, with at most two upstream attempts. The repeated tests shown above had no failed requests.
 
 ## Test commands and records
 
@@ -109,6 +109,3 @@ The result applies to this 50 ms waiting workload and these short trials. Longer
 ZHANG HONGYI: backend and Dockerfile; environment setup and backend tests; integration fixes, experiment scripts, performance analysis and final report. HAN YAN: initial Nginx load balancer, Docker Compose deployment and integration instructions.
 
 Reproduce all experiments with bash scripts/run_all.sh. The final source matches the SHA-256 manifest in results/acceptance/20261120T153935Z-31487/source-sha256.json. Full evidence index: results/README.md.
-
-[1] Nginx proxy module: nginx.org/en/docs/http/ngx_http_proxy_module.html
-[2] Course Project II specification, Sections 3.1-3.6.
